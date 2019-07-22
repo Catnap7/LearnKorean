@@ -6,11 +6,6 @@ import com.jjw.learnkorean.main.MainAdapter
 import com.jjw.learnkorean.main.TutorialFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnkorean.setting.SettingsFragment
-import com.roughike.bottombar.BottomBar
-import com.roughike.bottombar.BottomBarTab
-import com.roughike.bottombar.OnTabReselectListener
-import com.roughike.bottombar.OnTabSelectListener
-import com.roughike.bottombar.TabSelectionInterceptor
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,9 +29,8 @@ class MainActivity : AppCompatActivity() {
             val transaction = supportFragmentManager.beginTransaction()
 
             when (tabId) {
-//                R.id.tab_call_log -> transaction.replace(R.id.contentContainer, tutorialFragment).commit()
-//                R.id.tab_contacts -> transaction.replace(R.id.contentContainer, settingsFragment).commit()
-//                R.id.tab_macro_setting -> transaction.replace(R.id.contentContainer, setMacroFragment).commit()
+                R.id.tab_call_log -> transaction.replace(R.id.contentContainer, tutorialFragment).commit()
+                R.id.tab_contacts -> transaction.replace(R.id.contentContainer, settingsFragment).commit()
             }
         }
 
