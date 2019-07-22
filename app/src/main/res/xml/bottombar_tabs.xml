@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <tabs>
+        <tab
+                id="@+id/tab_call_log"
+                icon="@drawable/baseline_bookmarks_black_24dp"
+                title="call" />
+        <tab
+                id="@+id/tab_contacts"
+                icon="@drawable/baseline_language_black_24dp"
+                title="contacts" />
+        <tab
+                id="@+id/tab_macro_setting"
+                icon="@drawable/baseline_subtitles_black_24dp"
+                title="settings" />
+    </tabs>
+
