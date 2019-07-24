@@ -19,5 +19,6 @@ class HistoryFragment : Fragment(){
 
         //뷰 설정
         tv_fragment_main_tutorial.text = "fragment_main_history"
+
     }
 }

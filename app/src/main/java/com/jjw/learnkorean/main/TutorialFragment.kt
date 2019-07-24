@@ -41,6 +41,8 @@ class TutorialFragment : Fragment(){
         fragmentTransaction.replace(R.id.youtube_fragment, mYoutubePlayerFragment)
         fragmentTransaction.commit()
 
+        activity!!.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         return view
     }
 
@@ -50,5 +52,6 @@ class TutorialFragment : Fragment(){
 
         //뷰 설정
         tv_fragment_main_tutorial.text = "fragment_main_tutorial"
+
     }
 }

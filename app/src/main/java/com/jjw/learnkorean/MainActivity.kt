@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val settingsFragment = SettingsFragment()
         val tutorialFragment = TutorialFragment()
-
+/*
 //        val bottomBar = findViewById<BottomBar>(R.id.bottomBar)
         bottomBar.setOnTabSelectListener { tabId ->
             val transaction = supportFragmentManager.beginTransaction()
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.tab_call_log -> transaction.replace(R.id.contentContainer, tutorialFragment).commit()
                 R.id.tab_contacts -> transaction.replace(R.id.contentContainer, settingsFragment).commit()
             }
-        }
+        }*/
 
 
 

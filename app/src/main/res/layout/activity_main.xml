@@ -7,13 +7,23 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+    <FrameLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"/>
+
     <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/TabTheme"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/appBarLayout">
+
 
         <android.support.design.widget.TabLayout
                 android:id="@+id/tabLayout"
@@ -27,11 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    <FrameLayout
-            android:id="@+id/contentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/bottomBar" />
+
 
     <com.roughike.bottombar.BottomBar
             android:id="@+id/bottomBar"
@@ -42,6 +48,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/contentContainer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+
 
 
 </android.support.constraint.ConstraintLayout>
