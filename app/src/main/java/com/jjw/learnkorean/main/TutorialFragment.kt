@@ -6,18 +6,16 @@ import android.support.v4.app.Fragment
 import android.view.*
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
-import com.google.android.youtube.player.YouTubePlayerFragment
-import com.google.android.youtube.player.YouTubePlayerView
 import com.jjw.learnkorean.R
 import kotlinx.android.synthetic.main.fragment_main_tutorial.*
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
 
 
 
-
 class TutorialFragment : Fragment(){
 
     private val videoID = "N76HNPfI4zs"
+    private val youTubeApiKey = "AIzaSyAAa3Sq_2x4VJi7rUinIZc0lYbjCcnoukE"
 
     private val youtubeListener = object:YouTubePlayer.OnInitializedListener{
 
@@ -26,9 +24,8 @@ class TutorialFragment : Fragment(){
 
         override fun onInitializationSuccess(p0: YouTubePlayer.Provider?, youtubePlayer: YouTubePlayer, isReady: Boolean) {
             if (!isReady) {
-                val playKey = "AIzaSyAAa3Sq_2x4VJi7rUinIZc0lYbjCcnoukE"
-//                youtubePlayer!!.cueVideo(playKey)
-                youtubePlayer.loadVideo(playKey)
+
+                youtubePlayer.loadVideo(videoID)
                 youtubePlayer.play()
             }
         }
@@ -37,14 +34,12 @@ class TutorialFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_main_tutorial,container, false)
 
-//        val youTubePlayerView =
-//        youTubePlayerView.initialize( videoID,youtubeListener)
+        val mYoutubePlayerFragment = YouTubePlayerSupportFragment()
+        mYoutubePlayerFragment.initialize(youTubeApiKey, youtubeListener)
 
-        val youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance()
-
-
-//        var youtubeFragment = activity!!.supportFragmentManager.findFragmentById(R.id.youtube_fragment)
-
+        val fragmentTransaction = fragmentManager!!.beginTransaction()
+        fragmentTransaction.replace(R.id.youtube_fragment, mYoutubePlayerFragment)
+        fragmentTransaction.commit()
 
         return view
     }
