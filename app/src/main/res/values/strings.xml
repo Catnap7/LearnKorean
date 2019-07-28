@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LearnKorean</string>
+    <string name="youtube_api_key">AIzaSyAAa3Sq_2x4VJi7rUinIZc0lYbjCcnoukE</string>
 </resources>

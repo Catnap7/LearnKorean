@@ -5,27 +5,70 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/learnKorean_background_color"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-            android:id="@+id/youtube_fragment"
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_youtube"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="60dp"/>
-
-    <TextView
-            android:id="@+id/tv_fragment_main_tutorial"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/youtube_fragment"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="60dp">
+
+        <FrameLayout
+                android:id="@+id/youtube_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_youtube"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp">
+
+        <TextView
+                android:text="(대충 한국어 자막이라는 글)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_koreanSubtitles"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"/>
+        <TextView
+                android:id="@+id/tv_koreanSubtitlesDiction"
+                android:text="daechung hangook ah jammak e ranen det det "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightgray"
+                 android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_koreanSubtitles" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+        <TextView
+                android:text="this is subtitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_subtitles" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_koreanSubtitlesDiction"/>
+
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

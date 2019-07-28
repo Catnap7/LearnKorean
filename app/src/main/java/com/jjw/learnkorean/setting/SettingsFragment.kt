@@ -9,8 +9,6 @@ import com.jjw.learnkorean.R
 
 class SettingsFragment:Fragment() {
 
-    private val videoID = "N76HNPfI4zs"
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val settingsView = inflater.inflate(R.layout.activity_main_settings,container, false)
