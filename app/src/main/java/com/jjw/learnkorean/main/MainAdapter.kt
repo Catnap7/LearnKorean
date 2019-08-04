@@ -7,14 +7,14 @@ import android.view.ViewGroup
 
 class MainAdapter(fm:FragmentManager) :FragmentStatePagerAdapter(fm){
 
-    private val fragmentTitleList = mutableListOf("tutorial","goal","history")
+    private val fragmentTitleList = mutableListOf("tutorial","playlist","history")
 
     override fun getItem(p0: Int): Fragment? {
 
         return when(p0){
 
             0 ->  TutorialFragment()
-            1 ->  GoalFragment()
+            1 ->  PlaylistFragment()
             2 ->  HistoryFragment()
 
             else -> null
