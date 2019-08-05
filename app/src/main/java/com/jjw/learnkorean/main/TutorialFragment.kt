@@ -35,7 +35,6 @@ class TutorialFragment : Fragment(){
             Toast.makeText(context, "Content load fail..", Toast.LENGTH_SHORT).show()
             }
 
-
         override fun onInitializationSuccess(p0: YouTubePlayer.Provider?, youtubePlayer: YouTubePlayer, isReady: Boolean) {
             if (!isReady) {
                 youtubePlayer.setPlaybackEventListener(playbackEventListener)
@@ -56,7 +55,8 @@ class TutorialFragment : Fragment(){
         mYoutubePlayerFragment = YouTubePlayerSupportFragment()
         mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
 
-        view.layout_youtube.setOnClickListener(youtubeClickListener)
+        //화면 클릭하면 멈추고 뭐 이런거 달려고 했는데 굳이 안해도 될듯
+//        view.layout_youtube.setOnClickListener(youtubeClickListener)
 
         fragmentManager!!.beginTransaction().apply {
             replace(R.id.youtube_fragment, mYoutubePlayerFragment)
@@ -125,7 +125,6 @@ class TutorialFragment : Fragment(){
         }
 
         override fun onStopped() {
-//            flag = false
         }
 
         override fun onPaused() {
