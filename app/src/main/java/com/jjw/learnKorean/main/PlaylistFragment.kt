@@ -1,4 +1,4 @@
-package com.jjw.learnkorean.main
+package com.jjw.learnKorean.main
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,16 +7,13 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.youtube.player.YouTubeInitializationResult
-import com.google.android.youtube.player.YouTubePlayerView
-import com.google.android.youtube.player.YouTubeThumbnailLoader
-import com.google.android.youtube.player.YouTubeThumbnailView
-import com.jjw.learnkorean.R
-import com.jjw.learnkorean.playlist.PlaylistAdapter
+import com.jjw.learnKorean.R
+import com.jjw.learnKorean.playlist.PlaylistAdapter
 import kotlinx.android.synthetic.main.fragment_main_playlist.view.*
 
 class PlaylistFragment : Fragment(){
 
+    private lateinit var playlistAdapter:PlaylistAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val playlistView:View =  inflater.inflate(R.layout.fragment_main_playlist,container, false)
@@ -29,7 +26,7 @@ class PlaylistFragment : Fragment(){
         rv_youtubePlaylist.layoutManager = LinearLayoutManager(activity)
         rv_youtubePlaylist.itemAnimator = DefaultItemAnimator()
 
-        val playlistAdapter = PlaylistAdapter(activity!!,playList)
+        playlistAdapter = PlaylistAdapter(activity!!,playList)
 
         rv_youtubePlaylist.adapter = playlistAdapter
 
@@ -39,5 +36,9 @@ class PlaylistFragment : Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+    }
+
+    override fun onStop() {
+        super.onStop()
     }
 }

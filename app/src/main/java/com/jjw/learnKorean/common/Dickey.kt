@@ -1,4 +1,4 @@
-package com.jjw.learnkorean.common
+package com.jjw.learnKorean.common
 
 interface Dickey{
 

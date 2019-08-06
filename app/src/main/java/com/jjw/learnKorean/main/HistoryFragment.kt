@@ -1,27 +1,23 @@
-package com.jjw.learnkorean.setting
+package com.jjw.learnKorean.main
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jjw.learnkorean.R
+import com.jjw.learnKorean.R
+import kotlinx.android.synthetic.main.fragment_main_history.*
 
-class SettingsFragment:Fragment() {
-
+class HistoryFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val settingsView = inflater.inflate(R.layout.activity_main_settings,container, false)
-
-
-        return settingsView
-
-
+        return inflater.inflate(R.layout.fragment_main_history,container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        //뷰 설정
+        tv_history.text = "fragment_main_history"
     }
-
 }

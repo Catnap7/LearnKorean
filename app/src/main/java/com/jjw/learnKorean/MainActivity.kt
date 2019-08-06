@@ -1,11 +1,11 @@
-package com.jjw.learnkorean
+package com.jjw.learnKorean
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.jjw.learnkorean.main.MainAdapter
-import com.jjw.learnkorean.main.TutorialFragment
+import com.jjw.learnKorean.main.MainAdapter
+import com.jjw.learnKorean.main.TutorialFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import com.jjw.learnkorean.setting.SettingsFragment
+import com.jjw.learnKorean.setting.SettingsFragment
 
 
 class MainActivity : AppCompatActivity() {

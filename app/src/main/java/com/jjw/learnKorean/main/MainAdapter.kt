@@ -1,4 +1,4 @@
-package com.jjw.learnkorean.main
+package com.jjw.learnKorean.main
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
