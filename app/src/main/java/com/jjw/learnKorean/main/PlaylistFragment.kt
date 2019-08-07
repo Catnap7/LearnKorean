@@ -24,7 +24,7 @@ class PlaylistFragment : Fragment(){
 
         rv_youtubePlaylist.isNestedScrollingEnabled = false
         rv_youtubePlaylist.layoutManager = LinearLayoutManager(activity)
-        rv_youtubePlaylist.itemAnimator = DefaultItemAnimator()
+//        rv_youtubePlaylist.itemAnimator = DefaultItemAnimator()
 
         playlistAdapter = PlaylistAdapter(activity!!,playList)
 

@@ -2,16 +2,21 @@
 
     <tabs>
         <tab
-                id="@+id/tab_call_log"
-                icon="@drawable/baseline_bookmarks_black_24dp"
-                title="call" />
+                id="@+id/tab_home"
+                icon="@drawable/my_tab_icon_home"
+                barColorWhenSelected="@color/learnKorean_footer_color"
+                />
         <tab
-                id="@+id/tab_contacts"
-                icon="@drawable/baseline_language_black_24dp"
-                title="contacts" />
+                id="@+id/tab_korean"
+                icon="@drawable/my_tab_icon_korean"
+                barColorWhenSelected="@color/learnKorean_footer_color"/>
         <tab
-                id="@+id/tab_macro_setting"
-                icon="@drawable/baseline_subtitles_black_24dp"
-                title="settings" />
+                id="@+id/tab_notice"
+                icon="@drawable/my_tab_icon_face"
+                barColorWhenSelected="@color/learnKorean_footer_color"/>
+        <tab
+                id="@+id/tab_settings"
+                icon="@drawable/my_tab_icon_settings"
+                barColorWhenSelected="@color/learnKorean_footer_color"/>
     </tabs>
 

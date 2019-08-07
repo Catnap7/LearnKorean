@@ -1,5 +1,6 @@
 package com.jjw.learnKorean.playlist
 
+import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
@@ -15,6 +16,10 @@ import com.google.android.youtube.player.YouTubeThumbnailLoader
 import com.google.android.youtube.player.YouTubeThumbnailView
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_playlist.view.*
+import android.support.v4.content.ContextCompat.startActivity
+import android.support.v4.app.ActivityOptionsCompat
+import java.security.AccessController.getContext
+
 
 class PlaylistAdapter(private val context:Context, private val playlist: Array<String>) : RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
 
@@ -52,8 +57,11 @@ class PlaylistAdapter(private val context:Context, private val playlist: Array<S
 
                Intent(context, VideoActivity::class.java).let{
                     it.putExtra("videoId",videoName)
-                    context.startActivity(it)
+                    //클릭이벤트 전환 애니메이션 추가
+                    val options = ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity, holder.layout_youtube_thumbnail as View, "profile")
+                    context.startActivity(it, options.toBundle())
                }
+
           }
      }
 

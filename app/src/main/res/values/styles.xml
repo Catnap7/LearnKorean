@@ -14,6 +14,7 @@
         <item name="android:textColorPrimary">#EFA6C1</item>       <!-- 탭바 선택된 텍스트 -->
         <item name="android:textColorSecondary">@android:color/black</item>     <!-- 탭바 텍스트 -->
         <item name="colorAccent">#EFA6C1</item>                    <!-- 하단 움직이는 바 색-->
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
 </resources>

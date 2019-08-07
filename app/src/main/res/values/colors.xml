@@ -19,7 +19,7 @@
     <color name="learnKorean_background_color">#f7f9fc</color>
     <color name="learnKorean_statusbar_color">#ffffff</color>
     <color name="learnKorean_toolbar_color">#f7f9fc</color>
-    <color name="learnKorean_footer_color">#ffffff</color>
+    <color name="learnKorean_footer_color">#FAFAFA</color>
 
     <color name="learnKorean_line_color">#d7d7d7</color>
 
@@ -28,4 +28,25 @@
     <color name="learnKorean_subtext_color">#b2000000</color>
     <color name="learnKorean_b3black_color">#b3000000</color>
     <color name="learnKorean_disabletext_color">#61000000</color>
+
+    <!--MAP OF THE SOUL : PERSONA 작은것들을위한시-->
+    <color name="bts_boyWithLove_line_color">#EFA6C1</color>
+    <color name="bts_boyWithLove_background_color">#FF769B</color>
+
+
+    <!-- LOVE YOURSELF 結 `Answer` IDOL-->
+    <color name="bts_idol_line_color">#F0DBEE</color>
+    <color name="bts_idol_background_color">#D2AAC8</color>
+
+    <!-- LOVE YOURSELF 轉 'Tear' FAKE LOVE-->
+    <color name="bts_fakeLove_line_color">#A89BAD</color>
+    <color name="bts_fakeLove_background_color">#141722</color>
+
+    <!--  화양연화 pt.2 Run-->
+    <color name="bts_run_line_color">#ffffff</color>
+    <color name="bts_run_background_color">#ADD9EA</color>
+
+
+
+
 </resources>

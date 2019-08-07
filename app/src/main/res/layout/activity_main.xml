@@ -37,13 +37,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-
-
     <com.roughike.bottombar.BottomBar
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:bb_inActiveTabAlpha="0.6"
+            app:bb_activeTabAlpha="1"
+            app:bb_activeTabColor="#332E30"
             app:bb_tabXmlResource="@xml/bottombar_tabs"
             app:layout_constraintBottom_toBottomOf="@+id/contentContainer"
             app:layout_constraintStart_toStartOf="parent"

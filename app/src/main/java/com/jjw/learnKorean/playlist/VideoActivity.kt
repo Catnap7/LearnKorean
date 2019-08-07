@@ -40,7 +40,6 @@ class VideoActivity  : AppCompatActivity() {
     }
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playlist_video)
@@ -58,17 +57,11 @@ class VideoActivity  : AppCompatActivity() {
         }
     }
 
-
     private fun startSubtitles(){
         val sub = Subtitles()
         var subIndex = 0
 
-        //sub.N76HNPfI4zs
-        val subVal = "sub.$videoId"
-
-        var tv_resID = resources.getIdentifier(subVal, "Array", "com.jjw.learnKorean")
-
-        val koreanSub = tv_resID
+        val koreanSub:Array<String> = sub.N76HNPfI4zs
         val koreanSubTime = sub.N76HNPfI4zs_time
 
         val thread = Thread(Runnable {
