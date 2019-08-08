@@ -4,8 +4,7 @@
         <tab
                 id="@+id/tab_home"
                 icon="@drawable/my_tab_icon_home"
-                barColorWhenSelected="@color/learnKorean_footer_color"
-                />
+                barColorWhenSelected="@color/learnKorean_footer_color"/>
         <tab
                 id="@+id/tab_korean"
                 icon="@drawable/my_tab_icon_korean"

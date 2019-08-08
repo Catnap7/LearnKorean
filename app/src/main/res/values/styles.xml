@@ -17,4 +17,36 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
+
+    <style name="Text_black_17dp">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/learnKorean_maintext_color</item>
+    </style>
+
+    <style name="Text_black_15dp">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/learnKorean_maintext_color</item>
+    </style>
+
+    <style name="Text_black_14dp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/learnKorean_maintext_color</item>
+    </style>
+
+    <style name="Text_black_13dp">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/learnKorean_maintext_color</item>
+    </style>
+
+    <style name="Text_black_12dp">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/learnKorean_maintext_color</item>
+    </style>
+
+    <style name="Text_black_10dp">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/learnKorean_maintext_color</item>
+    </style>
+
+
 </resources>

@@ -16,7 +16,6 @@ class MainAdapter(fm:FragmentManager) :FragmentStatePagerAdapter(fm){
             0 ->  TutorialFragment()
             1 ->  PlaylistFragment()
             2 ->  HistoryFragment()
-
             else -> null
         }
     }

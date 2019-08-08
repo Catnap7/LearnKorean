@@ -4,6 +4,8 @@ package com.jjw.learnKorean.main
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
+import android.support.v4.app.FragmentManagerNonConfig
 import android.view.*
 import android.widget.Toast
 import com.google.android.youtube.player.YouTubeInitializationResult
@@ -14,9 +16,8 @@ import com.jjw.learnKorean.common.Subtitles
 import kotlinx.android.synthetic.main.fragment_main_tutorial.*
 
 
-
-
 class TutorialFragment : Fragment(){
+
 
     //진정국 하트
 //    private val videoID = "N76HNPfI4zs"
@@ -49,7 +50,7 @@ class TutorialFragment : Fragment(){
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_main_tutorial,container, false)
+        val tutorialView = inflater.inflate(R.layout.fragment_main_tutorial,container, false)
 
         mYoutubePlayerFragment = YouTubePlayerSupportFragment()
         mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
@@ -64,7 +65,7 @@ class TutorialFragment : Fragment(){
 
         activity!!.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
-        return view
+        return tutorialView
     }
 
 
@@ -72,7 +73,6 @@ class TutorialFragment : Fragment(){
         super.onActivityCreated(savedInstanceState)
 
         //뷰 설정
-//        tv_fragment_main_tutorial.text = "fragment_main_tutorial"
 
     }
 
