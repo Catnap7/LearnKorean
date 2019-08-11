@@ -26,7 +26,7 @@ class TutorialFragment : Fragment(){
     private lateinit var mYoutubePlayerFragment :YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
-    private var timer:Int = -3
+    private var timer:Int = -2
 
 
     private val youtubeListener = object:YouTubePlayer.OnInitializedListener{
@@ -84,8 +84,9 @@ class TutorialFragment : Fragment(){
     private fun startSubtitles(){
         val sub = Subtitles()
         var subIndex = 0
-        val koreanSub = sub.N76HNPfI4zs
-        val koreanSubTime = sub.N76HNPfI4zs_time
+        val koreanSub = sub.XsX3ATc3FbA
+        val koreanSubDiction = sub.XsX3ATc3FbA_diction
+        val koreanSubTime = sub.XsX3ATc3FbA_time
 
         val thread = Thread(Runnable {
             while (threadStopflag) {
@@ -95,6 +96,7 @@ class TutorialFragment : Fragment(){
                         tv_VideoName.text=timer.toString()
                         if(koreanSubTime.contains(timer)) {
                             tv_koreanSubtitles.text = koreanSub[subIndex]
+                            tv_koreanSubtitlesDiction.text = koreanSubDiction[subIndex]
                             subIndex++
                         }
                     }
