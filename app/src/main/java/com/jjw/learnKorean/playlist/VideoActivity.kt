@@ -2,8 +2,9 @@ package com.jjw.learnKorean.playlist
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
@@ -16,7 +17,7 @@ class VideoActivity  : AppCompatActivity() {
     private lateinit var mYoutubePlayerFragment : YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
-    private var timer:Int = -3
+    private var timer:Int = -2
     private lateinit var videoId:String
 
     private val youtubeListener = object: YouTubePlayer.OnInitializedListener{
@@ -48,11 +49,13 @@ class VideoActivity  : AppCompatActivity() {
             intent.getStringExtra("videoId")
         }else "XsX3ATc3FbA" //작은 것들을 위한 시
 
+        tv_VideoTitle.text = intent.getStringExtra("videoTitle")
+
         mYoutubePlayerFragment = YouTubePlayerSupportFragment()
         mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
 
         supportFragmentManager!!.beginTransaction().apply {
-            replace(R.id.youtube_fragment, mYoutubePlayerFragment)
+            replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
             commit()
         }
     }
@@ -69,7 +72,7 @@ class VideoActivity  : AppCompatActivity() {
                 try {
                     handler.post {
 
-                        tv_VideoName.text=timer.toString()
+//                        tv_VideoName.text=timer.toString()
                         if(koreanSubTime.contains(timer)) {
                             tv_koreanSubtitles.text = koreanSub[subIndex]
                             subIndex++

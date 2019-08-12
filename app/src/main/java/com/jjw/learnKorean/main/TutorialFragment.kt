@@ -3,26 +3,26 @@ package com.jjw.learnKorean.main
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentManagerNonConfig
 import android.view.*
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.jjw.learnKorean.R
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
 import com.jjw.learnKorean.common.Subtitles
 import kotlinx.android.synthetic.main.fragment_main_tutorial.*
+import kotlinx.android.synthetic.main.fragment_main_tutorial.view.*
 
 
-class TutorialFragment : Fragment(){
+class TutorialFragment : androidx.fragment.app.Fragment(){
 
 
     //진정국 하트
 //    private val videoID = "N76HNPfI4zs"
     //작은 것들을 위한 시
     private val videoID= "XsX3ATc3FbA"
+    private val videoTitle = "BTS (방탄소년단) '작은 것들을 위한 시 (Boy With Luv) feat. Halsey' Official MV"
     private lateinit var mYoutubePlayerFragment :YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
@@ -59,11 +59,13 @@ class TutorialFragment : Fragment(){
 //        view.layout_youtube.setOnClickListener(youtubeClickListener)
 
         fragmentManager!!.beginTransaction().apply {
-            replace(R.id.youtube_fragment, mYoutubePlayerFragment)
+            replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
             commit()
         }
 
         activity!!.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
+        tutorialView.tv_VideoTitle.text = videoTitle
 
         return tutorialView
     }
@@ -93,7 +95,7 @@ class TutorialFragment : Fragment(){
                 try {
                     handler.post {
 
-                        tv_VideoName.text=timer.toString()
+//                        tv_VideoName.text=timer.toString()
                         if(koreanSubTime.contains(timer)) {
                             tv_koreanSubtitles.text = koreanSub[subIndex]
                             tv_koreanSubtitlesDiction.text = koreanSubDiction[subIndex]

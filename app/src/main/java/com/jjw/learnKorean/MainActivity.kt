@@ -1,6 +1,6 @@
 package com.jjw.learnKorean
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jjw.learnKorean.korean.KoreanFragment
 import com.jjw.learnKorean.main.MainAdapter
@@ -26,14 +26,11 @@ class MainActivity : AppCompatActivity() {
             val transaction = supportFragmentManager.beginTransaction()
 
             when (tabId) {
-                R.id.tab_home -> transaction.replace(R.id.contentContainer,mainFragment ).commit()
+                R.id.tab_home -> transaction.replace(R.id.contentContainer,mainFragment).commit()
                 R.id.tab_korean -> transaction.replace(R.id.contentContainer, koreanFragment).commit()
                 R.id.tab_notice -> transaction.replace(R.id.contentContainer, noticeFragment).commit()
                 R.id.tab_settings -> transaction.replace(R.id.contentContainer, settingsFragment).commit()
             }
         }
-
-
-
     }
 }

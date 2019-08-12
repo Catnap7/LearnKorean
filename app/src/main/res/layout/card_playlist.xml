@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="76dp">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="76dp">
 
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_card_playlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -14,15 +14,16 @@
         <com.google.android.youtube.player.YouTubeThumbnailView
                 android:id="@+id/layout_youtube_thumbnail"
                 android:transitionName="profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
 
         <TextView
-                android:id="@+id/tv_VideoName"
+                style="@style/Text_black_12dp"
+                android:id="@+id/tv_VideoTitle"
                 android:text="VideoName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +42,7 @@
                 android:layout_marginStart="32dp" android:layout_marginRight="32dp" android:layout_marginEnd="32dp"/>
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

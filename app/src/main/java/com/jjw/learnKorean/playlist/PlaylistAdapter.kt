@@ -4,8 +4,8 @@ import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
-import android.support.constraint.ConstraintLayout
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -16,20 +16,14 @@ import com.google.android.youtube.player.YouTubeThumbnailLoader
 import com.google.android.youtube.player.YouTubeThumbnailView
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_playlist.view.*
-import android.support.v4.content.ContextCompat.startActivity
-import android.support.v4.app.ActivityOptionsCompat
-import java.security.AccessController.getContext
+import androidx.core.app.ActivityOptionsCompat
 
 
-class PlaylistAdapter(private val context:Context, private val playlist: Array<String>) : RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
-
-     private lateinit var videoName:String
+class PlaylistAdapter(private val context:Context, private val playlist: Array<String>,private val playlist_title: Array<String>) : RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
 
      override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-          videoName = playlist[position]
-
-          holder.tv_VideoName.text = videoName
+          holder.tv_VideoName.text = playlist_title[position]
 
           holder.layout_youtube_thumbnail.initialize(context.getString(R.string.youtube_api_key),object: YouTubeThumbnailView.OnInitializedListener{
 
@@ -56,12 +50,12 @@ class PlaylistAdapter(private val context:Context, private val playlist: Array<S
           holder.layout_playlist.setOnClickListener {
 
                Intent(context, VideoActivity::class.java).let{
-                    it.putExtra("videoId",videoName)
+                    it.putExtra("videoId", playlist[position])
+                    it.putExtra("videoTitle", playlist_title[position])
                     //클릭이벤트 전환 애니메이션 추가
                     val options = ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity, holder.layout_youtube_thumbnail as View, "profile")
                     context.startActivity(it, options.toBundle())
                }
-
           }
      }
 
@@ -71,13 +65,11 @@ class PlaylistAdapter(private val context:Context, private val playlist: Array<S
 
      override fun getItemCount(): Int = playlist.size
 
-
      inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
 
-          val tv_VideoName: TextView = view.tv_VideoName
+          val tv_VideoName: TextView = view.tv_VideoTitle
           val layout_playlist: ConstraintLayout = view.layout_card_playlist
           val layout_youtube_thumbnail:YouTubeThumbnailView = view.layout_youtube_thumbnail
-//          val iv_thumnail:ImageView = view.iv_thumbnail
      }
 
 
