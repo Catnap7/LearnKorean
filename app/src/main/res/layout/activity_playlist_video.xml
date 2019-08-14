@@ -59,7 +59,7 @@
             android:layout_marginEnd="16dp">
 
         <TextView
-                android:text="한국어 자막 "
+                android:text="한국어 자막"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_koreanSubtitles"

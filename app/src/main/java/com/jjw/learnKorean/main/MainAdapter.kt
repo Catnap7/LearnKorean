@@ -2,14 +2,13 @@ package com.jjw.learnKorean.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter
 import android.view.ViewGroup
 
-class MainAdapter(fm: androidx.fragment.app.FragmentManager) : androidx.fragment.app.FragmentStatePagerAdapter(fm){
+class MainAdapter(fm: FragmentManager) : androidx.fragment.app.FragmentStatePagerAdapter(fm){
 
     private val fragmentTitleList = mutableListOf("tutorial","playlist","history")
 
-    override fun getItem(p0: Int): androidx.fragment.app.Fragment? {
+    override fun getItem(p0: Int): Fragment? {
 
         return when(p0){
 
@@ -17,6 +16,7 @@ class MainAdapter(fm: androidx.fragment.app.FragmentManager) : androidx.fragment
             1 ->  PlaylistFragment()
             2 ->  HistoryFragment()
             else -> null
+
         }
     }
 

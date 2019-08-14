@@ -5,11 +5,34 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_koreanContents"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_bts_expression"
             android:layout_width="0dp"
             android:layout_height="90dp"
             android:clickable="true"
+            android:onClick="onClickListener"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -44,6 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="90dp"
             android:clickable="true"
+            android:onClick="onClickListener"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_bts_expression" android:layout_marginTop="8dp">
 
@@ -55,7 +79,6 @@
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
-
 
         <ImageButton
                 android:layout_width="16dp"
@@ -97,4 +120,60 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+<androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_practical"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_proverb" android:layout_marginTop="8dp">
+
+        <TextView
+                android:id="@+id/textView5"
+                android:text="실용 한국어"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="16dp"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/round_arrow_forward_ios_black_36"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_koreanContents"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingTop="7dp"
+            android:paddingBottom="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="5dp"
+            android:layout_margin="5dp"
+            card_view:cardUseCompatPadding="true"
+            android:orientation="vertical" card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.cardview.widget.CardView>
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>

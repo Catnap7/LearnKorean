@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_main_settings.view.*
 
 class SettingsFragment: androidx.fragment.app.Fragment() {
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val settingsView = inflater.inflate(R.layout.activity_main_settings,container, false)
 
@@ -42,8 +41,8 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
                  // email setting 배열로 해놔서 복수 발송 가능
                  val address = arrayOf(context!!.getString(R.string.my_email))
                  email.putExtra(Intent.EXTRA_EMAIL, address)
-                 email.putExtra(Intent.EXTRA_SUBJECT,"보내질 email 제목")
-                 email.putExtra(Intent.EXTRA_TEXT,"보낼 email 내용을 미리 적어 놓을 수 있습니다.\n")
+//                 email.putExtra(Intent.EXTRA_SUBJECT,"보내질 email 제목")
+//                 email.putExtra(Intent.EXTRA_TEXT,"보낼 email 내용을 미리 적어 놓을 수 있습니다.\n")
                  startActivity(email)
             }
         }

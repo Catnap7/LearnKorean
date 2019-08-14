@@ -13,23 +13,23 @@
             android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="0dp" app:layout_constraintTop_toTopOf="parent"/>
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomBar"/>
 
 
     <com.roughike.bottombar.BottomBar
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            app:bb_inActiveTabAlpha="0.6"
-            android:layout_alignParentBottom="true"
+            android:layout_height="50dp"
+            app:bb_inActiveTabAlpha="0.5"
+            app:bb_behavior="iconsOnly"
             app:bb_activeTabAlpha="1"
             app:bb_activeTabColor="#332E30"
             app:bb_tabXmlResource="@xml/bottombar_tabs"
-            app:layout_constraintBottom_toBottomOf="@+id/contentContainer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:clipToPadding="false"/>
+            app:layout_constraintEnd_toEndOf="parent" android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@+id/contentContainer"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 

@@ -8,6 +8,7 @@ import com.jjw.learnKorean.main.MainFragment
 import com.jjw.learnKorean.notice.NoticeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnKorean.setting.SettingsFragment
+import com.roughike.bottombar.BottomBar
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         val mainFragment = MainFragment()
         val koreanFragment = KoreanFragment()
         val noticeFragment = NoticeFragment()
+
+//         val roughikeBottomBar = BottomBar(this)
+//        roughikeBottomBar.isIconsOnlyMode = true
 
         bottomBar.setOnTabSelectListener { tabId ->
             val transaction = supportFragmentManager.beginTransaction()
