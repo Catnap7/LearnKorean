@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.jjw.learnKorean.R
 import com.jjw.learnKorean.playlist.PlaylistAdapter
 import kotlinx.android.synthetic.main.fragment_main_playlist.view.*
