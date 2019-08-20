@@ -13,6 +13,8 @@ import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_korean_main.view.*
 import android.graphics.drawable.Drawable
 import com.bumptech.glide.request.target.SimpleTarget
+import android.graphics.PorterDuff
+import android.graphics.Color.parseColor
 
 
 class KoreanListAdapter(private val context: Context, private  val koreanContentsList: List<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){
@@ -25,24 +27,25 @@ class KoreanListAdapter(private val context: Context, private  val koreanContent
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+
         holder.tv_VideoName.text = koreanContentsList[position]
 
+        val backGroundId = context.resources.getIdentifier("korean_contents_$position", "drawable", context.packageName)
+
         //배경이미지 삽입
-        Glide.with(context).load(R.drawable.korean_contents_1).into(object : SimpleTarget<Drawable>() {
+        Glide.with(context).load(backGroundId).into(object : SimpleTarget<Drawable>() {
             override fun onResourceReady(
                 resource: Drawable,
                 transition: com.bumptech.glide.request.transition.Transition<in Drawable>?){
                 holder.layout_contents.background = resource
+                holder.layout_contents.background.setColorFilter(parseColor("#BDBDBD"), PorterDuff.Mode.MULTIPLY)
             }
         })
-//        holder.layout_contents.background = Glide.with(context).load(R.drawable.korean_contents_1)
-
 
         holder.layout_contents.setOnClickListener {
 
             Intent(context, KoreanContentsActivity::class.java).let {
                 it.putExtra("videoId", koreanContentsList[position])
-//                it.putExtra("videoTitle", playlist_title[position])
                 context.startActivity(it)
             }
         }
