@@ -6,13 +6,56 @@
                                                    android:layout_height="match_parent">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_filter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/imageView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/icon_filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/filter_brand"
+                android:layout_width="150dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="15dp"
+                android:stateListAnimator="@null"
+                android:text="브랜드 전체"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView52"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/filter_price"
+                android:layout_width="150dp"
+                android:layout_height="38dp"
+                android:stateListAnimator="@null"
+                android:text="낮은 가격순"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/filter_brand"
+                app:layout_constraintTop_toTopOf="@+id/filter_brand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
                                                android:id="@+id/rv_koreanContents_detail"
                                                android:layout_width="0dp"
                                                android:layout_height="wrap_content"
                                                app:layout_constraintEnd_toEndOf="parent"
                                                app:layout_constraintStart_toStartOf="parent"
-                                               app:layout_constraintTop_toTopOf="parent">
+                                               app:layout_constraintTop_toBottomOf="@id/layout_filter">
 
     </androidx.recyclerview.widget.RecyclerView>
 

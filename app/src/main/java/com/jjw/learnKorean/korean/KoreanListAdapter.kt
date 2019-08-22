@@ -27,7 +27,6 @@ class KoreanListAdapter(private val context: Context, private  val koreanContent
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-
         holder.tv_VideoName.text = koreanContentsList[position]
 
         val backGroundId = context.resources.getIdentifier("korean_contents_$position", "drawable", context.packageName)
