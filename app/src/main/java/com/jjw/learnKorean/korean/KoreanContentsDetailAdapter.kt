@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jjw.learnKorean.R
 
-class KoreanContentsDetailAdapter(private val context: Context, private  val koreanContentsList: List<String>) : RecyclerView.Adapter<KoreanContentsDetailAdapter.ViewHolder>() {
+class KoreanContentsDetailAdapter(private val context: Context, private val koreanContentsList: List<String>) : RecyclerView.Adapter<KoreanContentsDetailAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_main, parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_detail, parent, false))
     }
 
     override fun getItemCount(): Int = koreanContentsList.size

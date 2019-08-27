@@ -17,7 +17,7 @@ import android.graphics.PorterDuff
 import android.graphics.Color.parseColor
 
 
-class KoreanListAdapter(private val context: Context, private  val koreanContentsList: List<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){
+class KoreanListAdapter(private val context: Context, private  val koreanContentsList: ArrayList<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_main, parent, false))
@@ -44,12 +44,14 @@ class KoreanListAdapter(private val context: Context, private  val koreanContent
         holder.layout_contents.setOnClickListener {
 
             Intent(context, KoreanContentsActivity::class.java).let {
-                it.putExtra("videoId", koreanContentsList[position])
+                it.putExtra("iFiltering", position.toString())
+                it.putStringArrayListExtra("koreanContentsList", koreanContentsList)
                 context.startActivity(it)
             }
         }
 
     }
+
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
 
         val tv_VideoName: TextView = view.textView2

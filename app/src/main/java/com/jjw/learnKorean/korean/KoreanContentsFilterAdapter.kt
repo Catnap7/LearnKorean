@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_korean_filter.view.*
 
-class ResultTireModelFilterAdapter(private val context: Context, private val  contentList: ArrayList<String>, private var iFiltering:Int) : RecyclerView.Adapter<ResultTireModelFilterAdapter.ViewHolder>() {
+class KoreanContentsFilterAdapter(private val context: Context, private val  contentList: ArrayList<String>, private var iFiltering:Int) : RecyclerView.Adapter<KoreanContentsFilterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_filter, parent, false))
