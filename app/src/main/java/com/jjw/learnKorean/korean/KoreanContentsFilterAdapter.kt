@@ -34,14 +34,14 @@ class KoreanContentsFilterAdapter(private val context: Context, private val  con
 
         if (iFiltering == position) {
             holder.tvBrand.typeface = mTextMedium
-            holder.tvBrand.setTextColor(ContextCompat.getColor(context, R.color.bts_boyWithLove_line_color))
+            holder.tvBrand.setTextColor(ContextCompat.getColor(context, R.color.learnKorean_blue_color80))
             holder.iv_filter.visibility = View.VISIBLE
         }
 
         holder.layout_filter.setOnClickListener {
 
             holder.tvBrand.typeface = mTextMedium
-            holder.tvBrand.setTextColor(ContextCompat.getColor(context, R.color.bts_boyWithLove_line_color))
+            holder.tvBrand.setTextColor(ContextCompat.getColor(context, R.color.learnKorean_blue_color80))
             holder.iv_filter.visibility = View.VISIBLE
             val activity = context as KoreanContentsFilterActivity
             activity.setBrandFilter(position.toString(), brand)
@@ -49,7 +49,7 @@ class KoreanContentsFilterAdapter(private val context: Context, private val  con
 
             if (position !=iFiltering){
                 holder.tvBrand.setTypeface(null, Typeface.NORMAL)
-                holder.tvBrand.setTextColor(ContextCompat.getColor(context, R.color.bts_boyWithLove_line_color))
+                holder.tvBrand.setTextColor(ContextCompat.getColor(context, R.color.learnKorean_blue_color80))
                 holder.iv_filter.visibility = View.INVISIBLE
             }
         }

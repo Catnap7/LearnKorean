@@ -44,9 +44,9 @@ class KoreanContentsFilterActivity :AppCompatActivity(){
             window.setGravity(Gravity.BOTTOM)
             window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-            /*if(intent.hasExtra("iFiltering")) {
+            if(intent.hasExtra("iFiltering")) {
                 iFiltering = intent.getStringExtra("iFiltering")
-            }*/
+            }
 
             if(intent.hasExtra("koreanContentsList")) {
                 contentsList = intent.getStringArrayListExtra("koreanContentsList")
@@ -80,10 +80,10 @@ class KoreanContentsFilterActivity :AppCompatActivity(){
             overridePendingTransition(R.anim.stay, R.anim.anim_slide_out_bottom)
         }
 
-        private fun setIntent(contentsTitle: String){
+        private fun setIntent(koreanContentsTitle: String){
             Intent(this, KoreanContentsActivity::class.java).let{
                 it.putExtra("iFiltering",iFiltering)
-                it.putExtra("contentsTitle",contentsTitle)
+                it.putExtra("koreanContentsTitle",koreanContentsTitle)
                 setResult(Activity.RESULT_OK,it)
             }
         }
@@ -99,7 +99,7 @@ class KoreanContentsFilterActivity :AppCompatActivity(){
             }
         }
 
-        companion object { var TAG = "ResultTIreModelFilterActivity" }
+        companion object { var TAG = "KoreanContentsFilterActivity" }
     }
 
 

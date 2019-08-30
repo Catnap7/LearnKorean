@@ -16,6 +16,9 @@
     <color name="starColor">#FFCD19</color>
 
 
+    <color name="learnKorean_blue_color80">#CC001489</color>
+    <color name="learnKorean_blue_color">#001489</color>
+
     <color name="learnKorean_background_color">#f7f9fc</color>
     <color name="learnKorean_statusbar_color">#ffffff</color>
     <color name="learnKorean_toolbar_color">#f7f9fc</color>

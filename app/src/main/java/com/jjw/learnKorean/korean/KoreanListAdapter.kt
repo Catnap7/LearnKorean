@@ -1,5 +1,6 @@
 package com.jjw.learnKorean.korean
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -17,7 +18,9 @@ import android.graphics.PorterDuff
 import android.graphics.Color.parseColor
 
 
-class KoreanListAdapter(private val context: Context, private  val koreanContentsList: ArrayList<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){
+class KoreanListAdapter(private val context: Context, private val koreanContentsList: ArrayList<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){
+
+    private lateinit var activity:Activity
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_main, parent, false))
@@ -26,6 +29,8 @@ class KoreanListAdapter(private val context: Context, private  val koreanContent
     override fun getItemCount(): Int = koreanContentsList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        activity = context as Activity
 
         holder.tv_VideoName.text = koreanContentsList[position]
 
@@ -43,20 +48,18 @@ class KoreanListAdapter(private val context: Context, private  val koreanContent
 
         holder.layout_contents.setOnClickListener {
 
-            Intent(context, KoreanContentsActivity::class.java).let {
+            Intent(activity, KoreanContentsActivity::class.java).let {
                 it.putExtra("iFiltering", position.toString())
                 it.putStringArrayListExtra("koreanContentsList", koreanContentsList)
-                context.startActivity(it)
+                activity.startActivity(it)
+                activity.overridePendingTransition(R.anim.anim_slide_in_right, R.anim.fade_out)
             }
         }
-
     }
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
 
         val tv_VideoName: TextView = view.textView2
         val layout_contents: ConstraintLayout = view.layout_korean_contents
-//        val layout_playlist: ConstraintLayout = view.layout_card_playlist
-//        val layout_youtube_thumbnail: YouTubeThumbnailView = view.layout_youtube_thumbnail
     }
 }

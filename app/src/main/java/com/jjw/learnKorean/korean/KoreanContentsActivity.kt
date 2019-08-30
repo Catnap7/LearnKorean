@@ -3,17 +3,21 @@ package com.jjw.learnKorean.korean
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_koren_koreancontents.*
+import android.view.WindowManager
+
 
 class KoreanContentsActivity :AppCompatActivity(){
 
     private var iFiltering:String = "0"
     private var koreanContentsList:ArrayList<String>? = null
     private lateinit var koreanContentsDetailAdapter:KoreanContentsDetailAdapter
+//    arrayList_PointHistory = ArrayList<PointHistory>()
 
     //컨텐츠의 메인 단어들
     private val contentsList = arrayListOf<String>("")
@@ -34,6 +38,8 @@ class KoreanContentsActivity :AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //상태바 없앰
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_koren_koreancontents)
 
         filter_brand.setOnClickListener(onClickListener)
@@ -63,15 +69,27 @@ class KoreanContentsActivity :AppCompatActivity(){
                 iFiltering = data!!.getStringExtra("iFiltering")
 //                val filteringList = java.util.ArrayList<ResultTireModel>()
 
-
+                filter_brand.text = data.getStringExtra("koreanContentsTitle")
 //                koreanContentsDetailAdapter.clear()
 //                    resultTireModelFilteredList.addAll(filteringList)
 //                    resultTireModelAdapter!!.notifyDataSetChanged()
 //                    setTireResultSorting(iSorting)
-                filter_brand.isEnabled = true
+
                 }
 //                filter_brand.text = data.getStringExtra("tire_brand_name")
 
             }
+        filter_brand.isEnabled = true
         }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
+        return when (keyCode) {
+            KeyEvent.KEYCODE_BACK -> {
+                finish()
+                overridePendingTransition(R.anim.stay, R.anim.anim_slide_out_right)
+                false
+            }
+            else -> false
+        }
+    }
 }
