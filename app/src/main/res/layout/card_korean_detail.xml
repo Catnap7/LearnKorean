@@ -5,7 +5,7 @@
                                                    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_filter"
+            android:id="@+id/layout_contents"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -15,7 +15,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-                android:id="@+id/tv_brand"
+                android:id="@+id/tv_contents"
                 style="@style/Text_black_15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

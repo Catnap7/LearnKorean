@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_koren_koreancontents.*
 import android.view.WindowManager
+import com.jjw.learnKorean.common.KoreanContents
 
 
 class KoreanContentsActivity :AppCompatActivity(){
@@ -20,7 +21,7 @@ class KoreanContentsActivity :AppCompatActivity(){
 //    arrayList_PointHistory = ArrayList<PointHistory>()
 
     //컨텐츠의 메인 단어들
-    private val contentsList = arrayListOf<String>("")
+//    private lateinit var contentsList:ArrayList<String>
 
     private val onClickListener = View.OnClickListener { v ->
         when (v.id) {
@@ -42,19 +43,30 @@ class KoreanContentsActivity :AppCompatActivity(){
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_koren_koreancontents)
 
-        filter_brand.setOnClickListener(onClickListener)
-        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,contentsList)
-
-        val layoutManager = LinearLayoutManager(this)
-        rv_koreanContents_detail.layoutManager = layoutManager
-        rv_koreanContents_detail.adapter = koreanContentsDetailAdapter
-
         if(intent.hasExtra("iFiltering")) {
             iFiltering = intent.getStringExtra("iFiltering")
         }
         if(intent.hasExtra("koreanContentsList")) {
             koreanContentsList = intent.getStringArrayListExtra("koreanContentsList")
         }
+
+        filter_brand.setOnClickListener(onClickListener)
+
+        val koreanContents = KoreanContents()
+        val korean_title_2 = koreanContents.$iFiltering
+        val korean_title_sub_2 = koreanContents.$iFiltering
+        val korean_title_diction_2 = koreanContents.korean_contents_diction_2
+        val korean_contents_2 = koreanContents.korean_title_2
+        val korean_contents_sub_2 = koreanContents.korean_title_2
+        val korean_contents_diction_2 = koreanContents.korean_title_2
+
+        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,contentsList)
+
+        val layoutManager = LinearLayoutManager(this)
+        rv_koreanContents_detail.layoutManager = layoutManager
+        rv_koreanContents_detail.adapter = koreanContentsDetailAdapter
+
+
 
         filter_brand.text = koreanContentsList?.get(Integer.parseInt(iFiltering)) ?: "Contents List"
 
