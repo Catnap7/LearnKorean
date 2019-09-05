@@ -1,30 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
+                                                    xmlns:tools="http://schemas.android.com/tools"
+                                                    android:layout_width="match_parent"
                                                    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_contents"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/background_bottom_line"
             android:clickable="true"
             android:focusable="true"
+            android:paddingBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-                android:id="@+id/tv_contents"
+                android:id="@+id/tv_ContentsTitle"
+                style="@style/Text_black_14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/tv_ContentsTitleDiction"
                 style="@style/Text_black_15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="contents"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="4dp"
+                android:alpha="0.8"
+                android:text="title_diction"
+                android:textColor="@color/bts_boyWithLove_line_color"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_ContentsTitle" />
+
+        <TextView
+                android:id="@+id/tv_ContentsTitleSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="title_diction_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ContentsTitleDiction" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_contents_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ContentsTitleSub">
+
+            <TextView
+                    android:id="@+id/tv_contents"
+                    style="@style/Text_black_14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:text="contents"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/tv_contentsDiction"
+                    style="@style/Text_black_15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="4dp"
+                    android:text="contents_diction"
+                    android:textColor="@color/bts_run_background_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_contents" />
+
+            <TextView
+                    android:id="@+id/tv_contentsSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:text="contents_sub"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_contentsDiction" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <!--<ImageView
                 android:id="@+id/iv_filter"

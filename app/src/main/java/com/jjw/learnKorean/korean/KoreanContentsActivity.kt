@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_koren_koreancontents.*
 import android.view.WindowManager
+import android.widget.TextView
 import com.jjw.learnKorean.common.KoreanContents
 
 
@@ -53,14 +54,17 @@ class KoreanContentsActivity :AppCompatActivity(){
         filter_brand.setOnClickListener(onClickListener)
 
         val koreanContents = KoreanContents()
-        val korean_title_2 = koreanContents.$iFiltering
-        val korean_title_sub_2 = koreanContents.$iFiltering
-        val korean_title_diction_2 = koreanContents.korean_contents_diction_2
-        val korean_contents_2 = koreanContents.korean_title_2
-        val korean_contents_sub_2 = koreanContents.korean_title_2
-        val korean_contents_diction_2 = koreanContents.korean_title_2
 
-        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,contentsList)
+//        val tv_ratingID = resources.getIdentifier("koreanContents_$iFiltering", "id", "com.jjw.learnKorean")
+
+        val korean_titlte = koreanContents.korean_title_2
+        val korean_title_sub = koreanContents.korean_title_sub_2
+        val korean_title_diction = koreanContents.korean_title_diction_2
+        val korean_contents = koreanContents.korean_contents_2
+        val korean_contents_sub = koreanContents.korean_contents_sub_2
+        val korean_contents_diction = koreanContents.korean_contents_diction_2
+
+        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,korean_titlte,korean_title_sub,korean_title_diction,korean_contents,korean_contents_sub,korean_contents_diction)
 
         val layoutManager = LinearLayoutManager(this)
         rv_koreanContents_detail.layoutManager = layoutManager
