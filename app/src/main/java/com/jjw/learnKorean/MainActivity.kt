@@ -8,8 +8,7 @@ import com.jjw.learnKorean.main.MainFragment
 import com.jjw.learnKorean.notice.NoticeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnKorean.setting.SettingsFragment
-import com.roughike.bottombar.BottomBar
-
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,18 +22,21 @@ class MainActivity : AppCompatActivity() {
         val koreanFragment = KoreanFragment()
         val noticeFragment = NoticeFragment()
 
-//         val roughikeBottomBar = BottomBar(this)
-//        roughikeBottomBar.isIconsOnlyMode = true
+        //첫화면 지정
+        supportFragmentManager.beginTransaction().replace(R.id.contentContainer, mainFragment).commitAllowingStateLoss()
 
-        bottomBar.setOnTabSelectListener { tabId ->
+        bottomBar.setOnNavigationItemSelectedListener { item ->
+
             val transaction = supportFragmentManager.beginTransaction()
 
-            when (tabId) {
-                R.id.tab_home -> transaction.replace(R.id.contentContainer,mainFragment).commit()
-                R.id.tab_korean -> transaction.replace(R.id.contentContainer, koreanFragment).commit()
-                R.id.tab_notice -> transaction.replace(R.id.contentContainer, noticeFragment).commit()
-                R.id.tab_settings -> transaction.replace(R.id.contentContainer, settingsFragment).commit()
+            when(item.itemId){
+                R.id.tab_home -> transaction.replace(R.id.contentContainer,mainFragment).commitAllowingStateLoss()
+                R.id.tab_korean -> transaction.replace(R.id.contentContainer, koreanFragment).commitAllowingStateLoss()
+                R.id.tab_notice -> transaction.replace(R.id.contentContainer, noticeFragment).commitAllowingStateLoss()
+                R.id.tab_settings -> transaction.replace(R.id.contentContainer, settingsFragment).commitAllowingStateLoss()
             }
+            return@setOnNavigationItemSelectedListener true
         }
+
     }
 }

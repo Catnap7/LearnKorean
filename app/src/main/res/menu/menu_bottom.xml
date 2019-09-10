@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/tab_home"
+            android:icon="@drawable/my_tab_icon_home"
+            android:enabled="true"
+            android:title="HOME" />
+
+    <item
+            android:id="@+id/tab_korean"
+            android:icon="@drawable/my_tab_icon_korean"
+            android:enabled="true"
+            android:title="KOREAN" />
+
+    <item
+            android:id="@+id/tab_notice"
+            android:icon="@drawable/my_tab_icon_face"
+            android:enabled="true"
+            android:title="ABOUT" />
+
+    <item
+            android:id="@+id/tab_settings"
+            android:icon="@drawable/my_tab_icon_settings"
+            android:enabled="true"
+            android:title="SETTINGS" />
+
+</menu>

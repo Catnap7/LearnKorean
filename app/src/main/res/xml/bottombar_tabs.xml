@@ -4,18 +4,22 @@
         <tab
                 id="@+id/tab_home"
                 icon="@drawable/my_tab_icon_home"
-                barColorWhenSelected="@color/learnKorean_footer_color"/>
+                barColorWhenSelected="@color/learnKorean_footer_color"
+                />
         <tab
                 id="@+id/tab_korean"
                 icon="@drawable/my_tab_icon_korean"
-                barColorWhenSelected="@color/learnKorean_footer_color"/>
+                barColorWhenSelected="@color/learnKorean_footer_color"
+                />
         <tab
                 id="@+id/tab_notice"
                 icon="@drawable/my_tab_icon_face"
-                barColorWhenSelected="@color/learnKorean_footer_color"/>
+                barColorWhenSelected="@color/learnKorean_footer_color"
+                />
         <tab
                 id="@+id/tab_settings"
                 icon="@drawable/my_tab_icon_settings"
-                barColorWhenSelected="@color/learnKorean_footer_color"/>
+                barColorWhenSelected="@color/learnKorean_footer_color"
+                />
     </tabs>
 

@@ -52,18 +52,10 @@ class TutorialFragment : androidx.fragment.app.Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val tutorialView = inflater.inflate(R.layout.fragment_main_tutorial,container, false)
 
-        mYoutubePlayerFragment = YouTubePlayerSupportFragment()
-        mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
-
         //화면 클릭하면 멈추고 뭐 이런거 달려고 했는데 굳이 안해도 될듯
 //        view.layout_youtube.setOnClickListener(youtubeClickListener)
 
-        fragmentManager!!.beginTransaction().apply {
-            replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
-            commit()
-        }
-
-        activity!!.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        init()
 
         tutorialView.tv_VideoTitle.text = videoTitle
 
@@ -81,6 +73,19 @@ class TutorialFragment : androidx.fragment.app.Fragment(){
     private val youtubeClickListener = View.OnClickListener {
 //        mYoutubePlayer.pause()
 //        tv_subtitles.text = "fragment_main_tutorial"
+    }
+
+    private fun init(){
+
+        mYoutubePlayerFragment = YouTubePlayerSupportFragment()
+        mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
+
+        fragmentManager!!.beginTransaction().apply {
+            replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
+            commit()
+        }
+
+        activity!!.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
     }
 
     private fun startSubtitles(){
@@ -156,6 +161,11 @@ class TutorialFragment : androidx.fragment.app.Fragment(){
         }
     }
 
+
+    override fun onResume() {
+        super.onResume()
+        init()
+    }
 
 
 }
