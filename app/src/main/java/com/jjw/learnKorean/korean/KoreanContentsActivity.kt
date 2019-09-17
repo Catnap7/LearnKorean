@@ -60,11 +60,11 @@ class KoreanContentsActivity :AppCompatActivity(){
         val korean_titlte = koreanContents.korean_title_2
         val korean_title_sub = koreanContents.korean_title_sub_2
         val korean_title_diction = koreanContents.korean_title_diction_2
-        val korean_contents = koreanContents.korean_contents_2
-        val korean_contents_sub = koreanContents.korean_contents_sub_2
-        val korean_contents_diction = koreanContents.korean_contents_diction_2
+//        val korean_contents = koreanContents.korean_contents_2
+//        val korean_contents_sub = koreanContents.korean_contents_sub_2
+//        val korean_contents_diction = koreanContents.korean_contents_diction_2
 
-        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,korean_titlte,korean_title_sub,korean_title_diction,korean_contents,korean_contents_sub,korean_contents_diction)
+        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,korean_titlte,korean_title_sub,korean_title_diction)
 
         val layoutManager = LinearLayoutManager(this)
         rv_koreanContents_detail.layoutManager = layoutManager

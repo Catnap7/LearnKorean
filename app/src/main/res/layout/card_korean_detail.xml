@@ -17,15 +17,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+                android:id="@+id/iv_more_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/round_arrow_drop_down_black_36" />
+
+        <ImageView
+                android:id="@+id/iv_more_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/round_arrow_drop_up_black_36" />
+
         <TextView
                 android:id="@+id/tv_ContentsTitle"
                 style="@style/Text_black_14dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:text="title"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +60,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:alpha="0.8"
+                android:visibility="gone"
                 android:text="title_diction"
                 android:textColor="@color/bts_boyWithLove_line_color"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,11 +72,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:visibility="gone"
                 android:text="title_diction_sub"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_ContentsTitleDiction" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+
+
+       <!-- <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_contents_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,7 +121,7 @@
                     android:text="contents_sub"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_contentsDiction" />
-
+-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -109,7 +137,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_brand"/>-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

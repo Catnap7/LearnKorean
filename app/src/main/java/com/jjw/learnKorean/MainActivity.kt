@@ -3,12 +3,10 @@ package com.jjw.learnKorean
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jjw.learnKorean.korean.KoreanFragment
-import com.jjw.learnKorean.main.MainAdapter
 import com.jjw.learnKorean.main.MainFragment
 import com.jjw.learnKorean.notice.NoticeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnKorean.setting.SettingsFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,16 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val settingsFragment = SettingsFragment()
-        val mainFragment = MainFragment()
-        val koreanFragment = KoreanFragment()
-        val noticeFragment = NoticeFragment()
-
         //첫화면 지정
-        supportFragmentManager.beginTransaction().replace(R.id.contentContainer, mainFragment).commitAllowingStateLoss()
+        MainFragment().let {
+            supportFragmentManager.beginTransaction().add(R.id.contentContainer, it).commitAllowingStateLoss()
+        }
 
         bottomBar.setOnNavigationItemSelectedListener { item ->
 
+            val settingsFragment = SettingsFragment()
+            val mainFragment = MainFragment()
+            val koreanFragment = KoreanFragment()
+            val noticeFragment = NoticeFragment()
             val transaction = supportFragmentManager.beginTransaction()
 
             when(item.itemId){
@@ -38,5 +37,9 @@ class MainActivity : AppCompatActivity() {
             return@setOnNavigationItemSelectedListener true
         }
 
+//        val appRate = AppRate()
+//        AppRate(this).init()
     }
+
+
 }

@@ -45,6 +45,7 @@ dependencies {
 
     //noinspection GradlePath
     implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+    implementation files('libs\\AppRate.jar')
 
     //바텀바
     implementation 'com.roughike:bottom-bar:2.3.1'

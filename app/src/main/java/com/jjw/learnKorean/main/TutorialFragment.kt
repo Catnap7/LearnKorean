@@ -121,7 +121,6 @@ class TutorialFragment : androidx.fragment.app.Fragment(){
         thread.start()
     }
 
-
     private val  playbackEventListener: YouTubePlayer.PlaybackEventListener = object: YouTubePlayer.PlaybackEventListener{
 
         override fun onSeekTo(p0: Int) {}
@@ -160,12 +159,8 @@ class TutorialFragment : androidx.fragment.app.Fragment(){
         override fun onError(p0: YouTubePlayer.ErrorReason?) {
         }
     }
-
-
     override fun onResume() {
         super.onResume()
-        init()
     }
-
 
 }
