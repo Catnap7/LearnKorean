@@ -14,7 +14,7 @@ import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_korean_detail.view.*
 
 
-//이거 나중에는 서버 붙이고 DB 연결해서 koreanContentsList에 하나로 묶어서 param 받아와야됨
+//TODO 이거 나중에는 서버 붙이고 DB 연결해서 koreanContentsList에 하나로 묶어서 param 받아와야됨
 class KoreanContentsDetailAdapter(private val context: Context,
                                   private val korean_titlte:Array<String>,private val korean_title_sub:Array<String>,
                                   private val korean_title_diction:Array<String>) : RecyclerView.Adapter<KoreanContentsDetailAdapter.ViewHolder>() {
@@ -35,24 +35,30 @@ class KoreanContentsDetailAdapter(private val context: Context,
 
         holder.layout_contents.setOnClickListener{
 
-            if(holder.iv_more_down.visibility == View.GONE){
-                holder.iv_more_up.visibility = View.GONE
-                holder.iv_more_down.visibility = View.VISIBLE
-                holder.tv_ContentsTitleDiction.visibility = View.GONE
-                holder.tv_ContentsTitleSub.visibility = View.GONE
-                selectPosition = -1
-            }else {
-
             //스르륵 애니메이션
             val animation: Animation = AlphaAnimation(0f, 1f)
-            animation.duration = 1000
-            holder.tv_ContentsTitleDiction.animation = animation
-            holder.tv_ContentsTitleSub.animation = animation
-            holder.tv_ContentsTitleDiction.visibility = View.VISIBLE
-            holder.tv_ContentsTitleSub.visibility = View.VISIBLE
-            holder.iv_more_up.visibility = View.VISIBLE
-            holder.iv_more_down.visibility = View.GONE
-            selectPosition = position
+
+            if(holder.iv_more_down.visibility == View.VISIBLE){
+
+                animation.duration = 1000
+                holder.tv_ContentsTitleDiction.animation = animation
+                holder.tv_ContentsTitle.animation = animation
+                holder.tv_ContentsTitleDiction.visibility = View.VISIBLE
+                holder.tv_ContentsTitle.visibility = View.VISIBLE
+                holder.iv_more_up.visibility = View.VISIBLE
+                holder.iv_more_down.visibility = View.GONE
+                selectPosition = position
+
+            }else {
+
+                animation.duration = 0
+                holder.tv_ContentsTitleDiction.animation = animation
+                holder.tv_ContentsTitle.animation = animation
+                holder.iv_more_up.visibility = View.GONE
+                holder.iv_more_down.visibility = View.VISIBLE
+                holder.tv_ContentsTitleDiction.visibility = View.INVISIBLE
+                holder.tv_ContentsTitle.visibility = View.GONE
+                selectPosition = -1
             }
 
 //            selectPosition = position
@@ -73,4 +79,8 @@ class KoreanContentsDetailAdapter(private val context: Context,
         val iv_more_up: ImageView = view.iv_more_up
 //        val layout_contents_detail: ConstraintLayout = view.layout_contents_detail
     }
+
+//    fun clear() {
+//        korean_titlte.clear()
+//    }
 }
