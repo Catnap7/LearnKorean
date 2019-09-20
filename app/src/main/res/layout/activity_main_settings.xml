@@ -9,17 +9,17 @@
             android:id="@+id/layout_appVersion"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         <TextView
                 style="@style/Text_black_13dp"
                 android:id="@+id/text_AppVersion"
-                android:text="앱 버전"
+                android:text="App Version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="16dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -41,37 +41,63 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_appVersion">
 
         <TextView
-                style="@style/Text_black_13dp"
                 android:id="@+id/textView3"
-                android:text="건의하기 "
+                style="@style/Text_black_13dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="suggest to developer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:srcCompat="@drawable/outline_email_black_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_theme"
+            android:id="@+id/layout_rateIt"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="60dp"
             android:clickable="true"
-            app:layout_constraintTop_toBottomOf="@+id/layout_sendMail" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_sendMail">
 
         <TextView
+                android:id="@+id/tv_rateit"
                 style="@style/Text_black_13dp"
-                android:id="@+id/textView4"
-                android:text="테마 변경 "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_marginStart="16dp"
+                android:text="App Evaluation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/outline_thumb_up_alt_black_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

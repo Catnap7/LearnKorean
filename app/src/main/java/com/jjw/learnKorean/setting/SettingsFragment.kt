@@ -2,6 +2,7 @@ package com.jjw.learnKorean.setting
 
 import android.content.Intent
 import android.content.pm.PackageInfo
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,19 +35,24 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
 
 
     private val onClickListener = View.OnClickListener {
-        when(it.id){
+        when (it.id) {
             R.id.layout_sendMail -> {
-                 val email = Intent(Intent.ACTION_SEND)
-                 email.type = "plain/text"
-                 // email setting 배열로 해놔서 복수 발송 가능
-                 val address = arrayOf(context!!.getString(R.string.my_email))
-                 email.putExtra(Intent.EXTRA_EMAIL, address)
+                val email = Intent(Intent.ACTION_SEND)
+                email.type = "plain/text"
+                // email setting 배열로 해놔서 복수 발송 가능
+                val address = arrayOf(context!!.getString(R.string.my_email))
+                email.putExtra(Intent.EXTRA_EMAIL, address)
 //                 email.putExtra(Intent.EXTRA_SUBJECT,"보내질 email 제목")
 //                 email.putExtra(Intent.EXTRA_TEXT,"보낼 email 내용을 미리 적어 놓을 수 있습니다.\n")
-                 startActivity(email)
+                startActivity(email)
+            }
+
+            R.id.layout_rateIt -> {
+                val appPackageName = activity!!.packageName
+                val playStore = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName"))
+                startActivity(playStore)
             }
         }
     }
-
 
 }

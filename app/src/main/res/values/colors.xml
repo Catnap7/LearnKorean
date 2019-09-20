@@ -23,6 +23,7 @@
     <color name="learnKorean_statusbar_color">#ffffff</color>
     <color name="learnKorean_toolbar_color">#f7f9fc</color>
     <color name="learnKorean_footer_color">#FAFAFA</color>
+    <color name="learnKorean_BottomNavigationView_bg_color">#FFFBFD</color>
 
     <color name="learnKorean_line_color">#d7d7d7</color>
 
