@@ -60,10 +60,7 @@ class KoreanContentsDetailAdapter(private val context: Context,
                 holder.tv_ContentsTitle.visibility = View.GONE
                 selectPosition = -1
             }
-
-//            selectPosition = position
         }
-
     }
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -71,16 +68,10 @@ class KoreanContentsDetailAdapter(private val context: Context,
         val tv_ContentsTitle: TextView = view.tv_ContentsTitle
         val tv_ContentsTitleDiction: TextView = view.tv_ContentsTitleDiction
         val tv_ContentsTitleSub: TextView = view.tv_ContentsTitleSub
-//        val tv_contents: TextView = view.tv_contents
-//        val tv_contentsDiction: TextView = view.tv_contentsDiction
-//        val tv_contentsSub: TextView = view.tv_contentsSub
         val layout_contents: ConstraintLayout = view.layout_contents
         val iv_more_down: ImageView = view.iv_more_down
         val iv_more_up: ImageView = view.iv_more_up
-//        val layout_contents_detail: ConstraintLayout = view.layout_contents_detail
     }
 
-//    fun clear() {
-//        korean_titlte.clear()
-//    }
+
 }

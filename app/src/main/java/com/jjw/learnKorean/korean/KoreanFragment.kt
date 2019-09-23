@@ -13,7 +13,7 @@ class KoreanFragment : androidx.fragment.app.Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val koreanView = inflater.inflate(R.layout.fragment_korean_main,container, false)
 
-        val koreanContentsList = arrayListOf("실용적인 표현","한국의 속담","날씨에 관한 표현","맛에 관한 표현","식당에서 사용되는 표현","한국어에 대해서")
+        val koreanContentsList = arrayListOf("실용적인 표현","한국의 속담","날씨에 관한 표현","맛에 관한 표현","식당에서 사용되는 표현")
 
         koreanView.rv_koreanContents.layoutManager = LinearLayoutManager(activity!!)
         koreanView.rv_koreanContents.adapter = KoreanListAdapter(activity!!,koreanContentsList)

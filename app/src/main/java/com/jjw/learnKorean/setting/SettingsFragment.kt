@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.pm.PackageInfo
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,12 +26,10 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
 
     }
 
-
     fun getVersionInfo() :String {
         val info: PackageInfo = context!!.packageManager.getPackageInfo(context!!.packageName, 0)
         return info.versionName
     }
-
 
     private val onClickListener = View.OnClickListener {
         when (it.id) {

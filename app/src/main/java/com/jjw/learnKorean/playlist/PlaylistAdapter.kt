@@ -39,7 +39,6 @@ class PlaylistAdapter(private val context:Context, private val playlist: Array<S
                               Log.e(TAG, "Youtube Thumbnail Error")
                          }
                     })
-
                }
 
                override fun onInitializationFailure(p0: YouTubeThumbnailView?, p1: YouTubeInitializationResult?) {

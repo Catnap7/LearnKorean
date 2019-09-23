@@ -120,7 +120,7 @@ class KoreanContentsActivity :AppCompatActivity(){
                 korean_title_sub = koreanContents.korean_title_sub_4
                 korean_title_diction = koreanContents.korean_title_diction_4
             }
-            //
+            //???
             "5" -> {
                 korean_title = koreanContents.korean_title_4
                 korean_title_sub = koreanContents.korean_title_sub_4
