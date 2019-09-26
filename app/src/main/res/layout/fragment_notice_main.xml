@@ -31,7 +31,7 @@
             <HorizontalScrollView
                     android:id="@+id/horizontalScrollView"
                     android:layout_width="0dp"
-                    android:layout_height="550dp"
+                    android:layout_height="400dp"
                     android:fillViewport="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
 
                     <ImageView
                             android:id="@+id/imageView4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"
@@ -55,15 +55,36 @@
 
                     <ImageView
                             android:id="@+id/imageView5"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/hangeul_2" />
+
+                    <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="0dp"
+                            android:layout_height="400dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/hangeul_3" />
+
+                    <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="400dp"
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintStart_toEndOf="@+id/imageView6"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/hangeul_2" />
+                            app:srcCompat="@drawable/hangeul_4" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -17,9 +17,6 @@ import kotlinx.android.synthetic.main.fragment_main_tutorial.view.*
 
 class TutorialFragment : androidx.fragment.app.Fragment(){
 
-
-    //진정국 하트
-//    private val videoID = "N76HNPfI4zs"
     //작은 것들을 위한 시
     private val videoID= "XsX3ATc3FbA"
     private val videoTitle = "BTS (방탄소년단) '작은 것들을 위한 시 (Boy With Luv) feat. Halsey' Official MV"
@@ -27,7 +24,6 @@ class TutorialFragment : androidx.fragment.app.Fragment(){
     private var threadStopflag = true
     private var handler = Handler()
     private var timer:Int = -2
-
 
     private val youtubeListener = object:YouTubePlayer.OnInitializedListener{
 
