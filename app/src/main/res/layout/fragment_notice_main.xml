@@ -104,6 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ㄴ"
+                        android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_link"
                         app:layout_constraintStart_toStartOf="@+id/tv_link_info"
                         app:layout_constraintTop_toTopOf="@+id/tv_link" />
@@ -112,7 +113,6 @@
                         android:id="@+id/tv_link"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
                         android:autoLink="web"
                         android:linksClickable="true"
@@ -135,6 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ㄴ"
+                        android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_link2"
                         app:layout_constraintStart_toStartOf="@+id/tv_link_info2"
                         app:layout_constraintTop_toTopOf="@+id/tv_link2" />
@@ -143,7 +144,6 @@
                         android:id="@+id/tv_link2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
                         android:autoLink="web"
                         android:linksClickable="true"
@@ -167,6 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ㄴ"
+                        android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_link3"
                         app:layout_constraintStart_toStartOf="@+id/tv_link_info3"
                         app:layout_constraintTop_toTopOf="@+id/tv_link3" />
@@ -175,7 +176,6 @@
                         android:id="@+id/tv_link3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
                         android:autoLink="web"
                         android:linksClickable="true"
