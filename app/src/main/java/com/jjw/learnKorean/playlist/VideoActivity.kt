@@ -18,6 +18,7 @@ class VideoActivity  : AppCompatActivity() {
     private var threadStopflag = true
     private var handler = Handler()
     private var timer:Int = -2
+    private var position:Int = 0
     private lateinit var videoId:String
 
     private val youtubeListener = object: YouTubePlayer.OnInitializedListener{
@@ -30,9 +31,16 @@ class VideoActivity  : AppCompatActivity() {
             if (!isReady) {
                 youtubePlayer.setPlaybackEventListener(playbackEventListener)
                 youtubePlayer.setPlayerStateChangeListener(playerStateChangeListener)
-                //플레이어 스타일 설정 CHROMELESS ( 동영상 진행 progressbar 및 멈춤기능없음), minimal (멈춤이랑 progressbar만 있음)
-                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
-                youtubePlayer.cueVideo(videoId)
+
+                //TODO 플레이어 스타일 설정 CHROMELESS ( 동영상 진행 progressbar 및 멈춤기능없음), mi nimal (멈춤이랑 progressbar만 있음)
+                //디버깅용
+//                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
+                //배포용
+                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS)
+
+                //TODO cuevideo 동영상만 로드 밑에꺼는 바로 실행됨
+//                youtubePlayer.cueVideo(videoId)
+                youtubePlayer.loadVideo(videoId)
 
                 //전체화면 버튼 숨김
                 youtubePlayer.setShowFullscreenButton(false)
@@ -63,9 +71,62 @@ class VideoActivity  : AppCompatActivity() {
     private fun startSubtitles(){
         val sub = Subtitles()
         var subIndex = 0
+        lateinit var koreanSub:Array<String>
+        lateinit var koreanSubTime:Array<Int>
+        lateinit var koreanSubtitlesDiction:Array<String>
+        lateinit var subtitles:Array<String>
 
-        val koreanSub:Array<String> = sub.N76HNPfI4zs
-        val koreanSubTime = sub.N76HNPfI4zs_time
+        when(position){
+            0 -> {
+                koreanSub = sub.N76HNPfI4zs
+                koreanSubTime = sub.N76HNPfI4zs_time
+                subtitles = sub.N76HNPfI4zs_sub
+                koreanSubtitlesDiction = sub.N76HNPfI4zs_diction
+            }
+            1 -> {
+                koreanSub = sub.mw_JgIonmD8
+                koreanSubTime = sub.mw_JgIonmD8_time
+                subtitles = sub.mw_JgIonmD8_sub
+                koreanSubtitlesDiction = sub.mw_JgIonmD8_diction
+            }
+            2 -> {
+                koreanSub = sub.wksUmcAx7z4
+                koreanSubTime = sub.wksUmcAx7z4_time
+                subtitles = sub.wksUmcAx7z4_sub
+                koreanSubtitlesDiction = sub.wksUmcAx7z4_diction
+            }
+            3 -> {
+                koreanSub = sub.A4lKqFR_67RI
+                koreanSubTime = sub.A4lKqFR_67RI_time
+                subtitles = sub.A4lKqFR_67RI_sub
+                koreanSubtitlesDiction = sub.A4lKqFR_67RI_diction
+            }
+            4 -> {
+                koreanSub = sub.A3_FXW0CW_8o
+                koreanSubTime = sub.A3_FXW0CW_8o_time
+                subtitles = sub.A3_FXW0CW_8o_sub
+                koreanSubtitlesDiction = sub.A3_FXW0CW_8o_diction
+            }
+            5 -> {
+                koreanSub = sub.gqvEO6o1Mx8
+                koreanSubTime = sub.gqvEO6o1Mx8_time
+                subtitles = sub.gqvEO6o1Mx8_sub
+                koreanSubtitlesDiction = sub.gqvEO6o1Mx8_diction
+            }
+            6 -> {
+                koreanSub = sub.FsEGaURjZ8w
+                koreanSubTime = sub.FsEGaURjZ8w_time
+                subtitles = sub.FsEGaURjZ8w_sub
+                koreanSubtitlesDiction = sub.FsEGaURjZ8w_diction
+            }
+            7 -> {
+                koreanSub = sub.fgja5tdRB8o
+                koreanSubTime = sub.fgja5tdRB8o_time
+                subtitles = sub.fgja5tdRB8o_sub
+                koreanSubtitlesDiction = sub.fgja5tdRB8o_diction
+            }
+        }
+
 
         val thread = Thread(Runnable {
             while (threadStopflag) {
@@ -75,6 +136,8 @@ class VideoActivity  : AppCompatActivity() {
 //                        tv_VideoName.text=timer.toString()
                         if(koreanSubTime.contains(timer)) {
                             tv_koreanSubtitles.text = koreanSub[subIndex]
+                            tv_koreanSubtitlesDiction.text = koreanSubtitlesDiction[subIndex]
+                            tv_subtitles.text = subtitles[subIndex]
                             subIndex++
                         }
                     }

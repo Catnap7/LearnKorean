@@ -3,14 +3,13 @@ package com.jjw.learnKorean
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.jjw.learnKorean.korean.KoreanFragment
 import com.jjw.learnKorean.main.MainFragment
 import com.jjw.learnKorean.notice.NoticeFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import com.jjw.learnKorean.setting.SettingsFragment
+import com.jjw.learnKorean.settings.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -5,9 +5,49 @@ class Subtitles {
 
      //진정국 하트
      val N76HNPfI4zs_time = arrayOf(5,10,15,23,28,32,34,47,51,54,65,66)
-     val N76HNPfI4zs = arrayOf("[00:05] 하트","[00:10] 하트","[00:15] 하트 하트으으~ ","[00:23] 휴지로 하트를 접고 싶은데 어떻게접는지 모르겠어요",
-       "[00:28] 여기서 이렇게한다음에","[00:32] 그렇지.. ","[00:34] 그렇지!","[00:47] 빨리가야되요 우리?","[00:51] 아 잠시만 나 왜이래","[00:53] 하트 ",
-         "[01:05] 다 쪼개졌네 하트가 이럼 안되는데 ","[01:06] 실패")
+    val N76HNPfI4zs = arrayOf("[00:05] 하트","[00:10] 하트","[00:15] 하트 하트으으~ ","[00:23] 휴지로 하트를 접고 싶은데 어떻게접는지 모르겠어요",
+       "[00:28] 여기서 이렇게한다음에","[00:32] 그렇지.. ","[00:34] 그렇지!","[00:47] 빨리 가야 돼요 우리?","[00:51] 아 잠시만 나 왜이래","[00:53] 하트 ",
+         "[01:05] 다 쪼개졌네 하트가 이럼 안되는데","[01:06] 실패")
+    val N76HNPfI4zs_sub = arrayOf("Heart","Heart","Heart, heart~","I want to fold the heart with tissue, but I don't know how to fold it.","Here we go.at the sound of","That's right..","Yeah!","We have to go. We?","Oh, wait a minute. What's wrong with me?","Heart","It's all broken up. Hearts are not going to work","failure")
+    val N76HNPfI4zs_diction = arrayOf("hateu","hateu","hateu hateueueu~","hyujiro hateureul jeopgo sipeunde eotteohgejeopneunji moreugesseoyo","yeogiseo ireohgehandaeume","geureohji.."," geureohji!!",
+                                    "ppalli gaya dwaeyo uri?","a jamsiman na waeirae","hateu","da jjogaejyeossne hateuga ireom andoeneunde","silpae")
+
+    //"N76HNPfI4zs","mw-JgIonmD8","wksUmcAx7z4","4lKqFR-67RI","3-FXW0CW_8o","gqvEO6o1Mx8","FsEGaURjZ8w","fgja5tdRB8o"
+    val mw_JgIonmD8 = arrayOf("RM은 열심히 책을 읽는 중입니다. 독서하는 그를 지켜봐주세요")
+    val mw_JgIonmD8_time = arrayOf(5)
+    val mw_JgIonmD8_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val mw_JgIonmD8_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+
+
+    val wksUmcAx7z4 = arrayOf("맛있어","으으음~~")
+    val wksUmcAx7z4_time = arrayOf(5)
+    val wksUmcAx7z4_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val wksUmcAx7z4_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+
+    val A4lKqFR_67RI = arrayOf("맛있어","으으음~~")
+    val A4lKqFR_67RI_time = arrayOf(5)
+    val A4lKqFR_67RI_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val A4lKqFR_67RI_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+
+    val A3_FXW0CW_8o = arrayOf("맛있어","으으음~~")
+    val A3_FXW0CW_8o_time = arrayOf(5)
+    val A3_FXW0CW_8o_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val A3_FXW0CW_8o_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+
+    val gqvEO6o1Mx8 = arrayOf("맛있어","으으음~~")
+    val gqvEO6o1Mx8_time = arrayOf(5)
+    val gqvEO6o1Mx8_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val gqvEO6o1Mx8_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+
+    val FsEGaURjZ8w = arrayOf("맛있어","으으음~~")
+    val FsEGaURjZ8w_time = arrayOf(5)
+    val FsEGaURjZ8w_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val FsEGaURjZ8w_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+
+    val fgja5tdRB8o = arrayOf("맛있어","으으음~~")
+    val fgja5tdRB8o_time = arrayOf(5)
+    val fgja5tdRB8o_sub = arrayOf("RM is reading a book hard. Watch him reading")
+    val fgja5tdRB8o_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
 
     //작은 것들을 위한 시
      val XsX3ATc3FbA_time = arrayOf(34, 37, 42, 46, 49, 52, 58, 61, 63, 65, 67, 71, 73, 76,80,83,85,88,90,94,95,98,102,107,111,112,113,117,120,125,127,130,134,138,139,142,145,148,151,153,156,159,162,165,167,170,173,176,178,180,183,194,195,198,200,201,203,205,207,209,211,213,215,219,221,224,233,236,240)

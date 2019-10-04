@@ -37,7 +37,7 @@
         <View
                 android:layout_width="0dp"
                 android:layout_height="0.1dp"
-                android:background="@color/bts_fakeLove_line_color"
+                android:background="@color/bts_idol_line_color"
                 app:layout_constraintBottom_toBottomOf="@+id/layout_appVersion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -78,7 +78,7 @@
         <View
                 android:layout_width="0dp"
                 android:layout_height="0.1dp"
-                android:background="@color/bts_fakeLove_line_color"
+                android:background="@color/bts_idol_line_color"
                 app:layout_constraintBottom_toBottomOf="@+id/layout_sendMail"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -119,7 +119,7 @@
         <View
                 android:layout_width="0dp"
                 android:layout_height="0.1dp"
-                android:background="@color/bts_fakeLove_line_color"
+                android:background="@color/bts_idol_line_color"
                 app:layout_constraintBottom_toBottomOf="@+id/layout_rateIt"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -160,11 +160,52 @@
         <View
                 android:layout_width="0dp"
                 android:layout_height="0.1dp"
-                android:background="@color/bts_fakeLove_line_color"
+                android:background="@color/bts_idol_line_color"
                 app:layout_constraintBottom_toBottomOf="@+id/layout_openSource_licence"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+   <!-- <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_about"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_openSource_licence">
+
+        <TextView
+                android:id="@+id/tv_about"
+                style="@style/Text_black_13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="for about this app"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/round_priority_high_black_24" />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0.1dp"
+                android:background="@color/bts_idol_line_color"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_about"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.setting
+package com.jjw.learnKorean.settings
 
 import android.content.Intent
 import android.content.pm.PackageInfo
@@ -49,6 +49,13 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
                 val playStore = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName"))
                 startActivity(playStore)
             }
+
+            R.id.layout_openSource_licence -> {
+                val filterIntent = Intent(context, OpenSourceActivity::class.java)
+                startActivity(filterIntent)
+                activity!!.overridePendingTransition(R.anim.slide_in_half, R.anim.fade_out)
+            }
+
         }
     }
 

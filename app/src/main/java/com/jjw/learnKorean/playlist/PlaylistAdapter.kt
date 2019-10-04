@@ -51,6 +51,7 @@ class PlaylistAdapter(private val context:Context, private val playlist: Array<S
                Intent(context, VideoActivity::class.java).let{
                     it.putExtra("videoId", playlist[position])
                     it.putExtra("videoTitle", playlist_title[position])
+                    it.putExtra("position",position)
                     //클릭이벤트 전환 애니메이션 추가
                     val options = ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity, holder.layout_youtube_thumbnail as View, "profile")
                     context.startActivity(it, options.toBundle())

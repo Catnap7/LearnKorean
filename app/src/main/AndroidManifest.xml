@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.jjw.learnKorean"
-          android:versionCode="2"
-          android:versionName="1.0.1">
+          android:versionCode="3"
+          android:versionName="1.0.2">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher_learnkorean_light3"
+            android:icon="@mipmap/ic_launcher_study_k_just_logo"
             android:hardwareAccelerated="true"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_learnkorean_light3_round"
+            android:roundIcon="@mipmap/ic_launcher_study_k_just_logo"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
@@ -35,6 +35,12 @@
                 android:theme="@style/AppTheme" />
         <activity
                 android:name="com.jjw.learnKorean.korean.KoreanContentsActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme" />
+
+        <activity
+                android:name="com.jjw.learnKorean.settings.OpenSourceActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme" />
