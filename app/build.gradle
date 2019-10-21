@@ -7,7 +7,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('/AppDev/LearnKorean_git/learnKorean_key.keystore')
+            storeFile file('/AppDev/LearnKorean/learnKorean_key.keystore')
             storePassword 'q1w2e3r4@'
             keyAlias = 'learnKorean_key'
             keyPassword 'q1w2e3r4@'

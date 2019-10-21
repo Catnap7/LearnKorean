@@ -7,8 +7,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_main_settings.view.*
+
+
 
 class SettingsFragment: androidx.fragment.app.Fragment() {
 
@@ -17,6 +20,8 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
 
         settingsView.tv_appVersion.text = getVersionInfo()
         settingsView.layout_sendMail.setOnClickListener(onClickListener)
+        settingsView.layout_rateIt.setOnClickListener(onClickListener)
+        settingsView.layout_openSource_licence.setOnClickListener(onClickListener)
 
         return settingsView
     }
@@ -33,6 +38,13 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
 
     private val onClickListener = View.OnClickListener {
         when (it.id) {
+
+            R.id.layout_rateIt -> {
+                val appPackageName = activity!!.packageName
+                val playStore = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName"))
+                startActivity(playStore)
+            }
+
             R.id.layout_sendMail -> {
                 val email = Intent(Intent.ACTION_SEND)
                 email.type = "plain/text"
@@ -42,12 +54,6 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
 //                 email.putExtra(Intent.EXTRA_SUBJECT,"보내질 email 제목")
 //                 email.putExtra(Intent.EXTRA_TEXT,"보낼 email 내용을 미리 적어 놓을 수 있습니다.\n")
                 startActivity(email)
-            }
-
-            R.id.layout_rateIt -> {
-                val appPackageName = activity!!.packageName
-                val playStore = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName"))
-                startActivity(playStore)
             }
 
             R.id.layout_openSource_licence -> {

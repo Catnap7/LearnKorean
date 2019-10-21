@@ -13,41 +13,43 @@ class Subtitles {
                                     "ppalli gaya dwaeyo uri?","a jamsiman na waeirae","hateu","da jjogaejyeossne hateuga ireom andoeneunde","silpae")
 
     //"N76HNPfI4zs","mw-JgIonmD8","wksUmcAx7z4","4lKqFR-67RI","3-FXW0CW_8o","gqvEO6o1Mx8","FsEGaURjZ8w","fgja5tdRB8o"
+    //RM독서
     val mw_JgIonmD8 = arrayOf("RM은 열심히 책을 읽는 중입니다. 독서하는 그를 지켜봐주세요")
     val mw_JgIonmD8_time = arrayOf(5)
     val mw_JgIonmD8_sub = arrayOf("RM is reading a book hard. Watch him reading")
     val mw_JgIonmD8_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
 
-
-    val wksUmcAx7z4 = arrayOf("맛있어","으으음~~")
-    val wksUmcAx7z4_time = arrayOf(5)
+    //RM 생일
+    val wksUmcAx7z4 = arrayOf("음 맛있어","으으음~~","남준이 오늘 생일입니다","남준 오늘 생일이야","아 지금 투어때 지민이랑 남준이가 생일이구나","형 특별하게 생일이 이틀이네요?","시간보면 한국 내일로 뜨잖아요","아 아 거기가 지금 일이니까","남준이 깜짝 생일파티 한번만 준비해주세요","남준아 어떤케익 먹고싶냐?","반복된 치즈케익~","남준아 깜짝 생일파티 언제해줄까?","너가 원할때 해줄게","아악!!","너 생일축하노래 불러준다",
+                                "고맙다!","해피 벌스데이 투 준~~","해피벌스데이 ~","갑자기?","해피 벌스데이 남준쓰~","너무 고맙다 진짜","해피 벌스데이 마이 브~~ 로~~~","해피 벌스데이 투 유~~! ♬","화음 쩔었지?")
+    val wksUmcAx7z4_time = arrayOf(1,4,11,13,17,20,22)
     val wksUmcAx7z4_sub = arrayOf("RM is reading a book hard. Watch him reading")
     val wksUmcAx7z4_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
 
-    val A4lKqFR_67RI = arrayOf("맛있어","으으음~~")
+    val A4lKqFR_67RI = arrayOf("추후 업데이트 예정입니다 조금만 기다려주세요","으으음~~")
     val A4lKqFR_67RI_time = arrayOf(5)
-    val A4lKqFR_67RI_sub = arrayOf("RM is reading a book hard. Watch him reading")
-    val A4lKqFR_67RI_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+    val A4lKqFR_67RI_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
+    val A4lKqFR_67RI_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
 
-    val A3_FXW0CW_8o = arrayOf("맛있어","으으음~~")
+    val A3_FXW0CW_8o = arrayOf("추후 업데이트 예정입니다 ㅠㅠ 조금만 기다려주세요","으으음~~")
     val A3_FXW0CW_8o_time = arrayOf(5)
-    val A3_FXW0CW_8o_sub = arrayOf("RM is reading a book hard. Watch him reading")
-    val A3_FXW0CW_8o_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+    val A3_FXW0CW_8o_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
+    val A3_FXW0CW_8o_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
 
-    val gqvEO6o1Mx8 = arrayOf("맛있어","으으음~~")
+    val gqvEO6o1Mx8 = arrayOf("추후 업데이트 예정입니다 ㅠㅠ조금만 기다려주세요 ","으으음~~")
     val gqvEO6o1Mx8_time = arrayOf(5)
-    val gqvEO6o1Mx8_sub = arrayOf("RM is reading a book hard. Watch him reading")
-    val gqvEO6o1Mx8_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+    val gqvEO6o1Mx8_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
+    val gqvEO6o1Mx8_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
 
-    val FsEGaURjZ8w = arrayOf("맛있어","으으음~~")
+    val FsEGaURjZ8w = arrayOf("추후 업데이트 예정입니다 ㅠㅠ조금만 기다려주세요","으으음~~")
     val FsEGaURjZ8w_time = arrayOf(5)
-    val FsEGaURjZ8w_sub = arrayOf("RM is reading a book hard. Watch him reading")
-    val FsEGaURjZ8w_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+    val FsEGaURjZ8w_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
+    val FsEGaURjZ8w_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
 
-    val fgja5tdRB8o = arrayOf("맛있어","으으음~~")
+    val fgja5tdRB8o = arrayOf("추후 업데이트 예정입니다 ㅠㅠ조금만 기다려주세요","으으음~~")
     val fgja5tdRB8o_time = arrayOf(5)
-    val fgja5tdRB8o_sub = arrayOf("RM is reading a book hard. Watch him reading")
-    val fgja5tdRB8o_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
+    val fgja5tdRB8o_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
+    val fgja5tdRB8o_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
 
     //작은 것들을 위한 시
      val XsX3ATc3FbA_time = arrayOf(34, 37, 42, 46, 49, 52, 58, 61, 63, 65, 67, 71, 73, 76,80,83,85,88,90,94,95,98,102,107,111,112,113,117,120,125,127,130,134,138,139,142,145,148,151,153,156,159,162,165,167,170,173,176,178,180,183,194,195,198,200,201,203,205,207,209,211,213,215,219,221,224,233,236,240)
