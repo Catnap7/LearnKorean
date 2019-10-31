@@ -57,9 +57,9 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
             }
 
             R.id.layout_openSource_licence -> {
-                val filterIntent = Intent(context, OpenSourceActivity::class.java)
+                val filterIntent = Intent(activity!!, OpenSourceActivity::class.java)
                 startActivity(filterIntent)
-                activity!!.overridePendingTransition(R.anim.slide_in_half, R.anim.fade_out)
+                activity?.overridePendingTransition(R.anim.slide_in_half, R.anim.fade_out)
             }
 
         }

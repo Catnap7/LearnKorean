@@ -9,4 +9,6 @@
     <string name="admob_app_id">ca-app-pub-6167489176355259~8499835181</string>
     <string name="banner_ad_unit_id">ca-app-pub-6167489176355259/4177446795</string>
     <string name="banner_ad_unit_id_for_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="alert_error">Error</string>
+
 </resources>
