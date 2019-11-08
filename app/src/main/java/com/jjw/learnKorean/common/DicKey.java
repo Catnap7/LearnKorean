@@ -1,6 +1,6 @@
 package com.jjw.learnKorean.common;
 
-interface DicKey {
+public interface DicKey {
 
     public static final String SCHEME = "http";
     public static final String URL_CONDITIONS_1 = "sbk2720.cafe24.com/SERVICE_POLICY_CUSTOMER.html";    //서비스이용약관

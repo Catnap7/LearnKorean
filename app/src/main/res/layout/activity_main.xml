@@ -44,7 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/contentContainer"
             app:menu="@menu/menu_bottom" />
 
-    <!--TODO 배너광고 -->
+    <!--TODO 배너광고 (테스트할땐 banner id 뒤에 _for_test 붙이면됨)-->
     <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             app:adSize="BANNER"
-            app:adUnitId="@string/banner_ad_unit_id_for_test"
+            app:adUnitId="@string/banner_ad_unit_id"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/contentContainer"
             app:layout_constraintStart_toStartOf="parent" />

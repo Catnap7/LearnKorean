@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import com.jjw.learnKorean.common.ToolBarActivity;
 import com.jjw.learnKorean.common.WsApplication;
 import com.jjw.learnKorean.common.WsWebView;
+import com.jjw.learnKorean.http.WsHttpClient;
 
 
 /**

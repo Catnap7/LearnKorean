@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.jjw.learnKorean.R
+import com.jjw.learnKorean.WebViewActivity
+import com.jjw.learnKorean.common.DicKey
 import kotlinx.android.synthetic.main.activity_main_settings.view.*
 
 
@@ -57,7 +59,13 @@ class SettingsFragment: androidx.fragment.app.Fragment() {
             }
 
             R.id.layout_openSource_licence -> {
+                val path = DicKey.SCHEME + "://"
+                //ToolBar 문제 해결하면 웹뷰로 갈아끼울것
+//                val filterIntent = Intent(activity!!, WebViewActivity::class.java)
                 val filterIntent = Intent(activity!!, OpenSourceActivity::class.java)
+                filterIntent.putExtra("path", path + DicKey.URL_CONDITIONS_1)
+                filterIntent.putExtra("title", "서비스 이용 약관")
+                filterIntent.putExtra("margin", true)
                 startActivity(filterIntent)
                 activity?.overridePendingTransition(R.anim.slide_in_half, R.anim.fade_out)
             }

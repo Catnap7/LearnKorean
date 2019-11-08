@@ -3,7 +3,8 @@ package com.jjw.learnKorean.http;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.wts.common.Create_ProgressDialog;
+
+import com.jjw.learnKorean.common.Create_ProgressDialog;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;

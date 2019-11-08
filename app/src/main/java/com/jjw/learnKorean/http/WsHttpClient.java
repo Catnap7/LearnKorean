@@ -3,7 +3,7 @@ package com.jjw.learnKorean.http;
 import android.util.Log;
 import android.webkit.CookieManager;
 
-import com.wts.common.DicKey;
+import com.jjw.learnKorean.common.DicKey;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

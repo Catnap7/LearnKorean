@@ -18,7 +18,7 @@ import java.util.Objects;
 
 public abstract class ToolBarActivity extends AppCompatActivity{
 
-//    protected Mng_Cache cache;
+    protected Mng_Cache cache;
     private static Typeface mTypeface = null;
 //    protected Tracker mTracker;
     protected String sScreenName = "";
@@ -30,7 +30,7 @@ public abstract class ToolBarActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
 
         // 케쉬데이타초기화
-//        cache = Mng_Cache.getInstance();
+        cache = Mng_Cache.getInstance();
 
 //        TirebidsApplication application = (TirebidsApplication) getApplication();
 //        mTracker = application.getDefaultTracker();
@@ -55,7 +55,7 @@ public abstract class ToolBarActivity extends AppCompatActivity{
     @Override
     protected void onResume() {
         super.onResume();
-//        cache.putPrefString("ACTIVITY_NAME", sTag);
+        cache.putPrefString("ACTIVITY_NAME", sTag);
 //        mTracker.setScreenName(sScreenName);
 //        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
