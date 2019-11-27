@@ -51,9 +51,9 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/hangeul_1" />
+                            app:srcCompat="@drawable/hangeul_2" />
 
-                    <ImageView
+                   <!-- <ImageView
                             android:id="@+id/imageView5"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -62,7 +62,7 @@
                             app:layout_constraintStart_toEndOf="@+id/imageView4"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/hangeul_2" />
-
+-->
                     <ImageView
                             android:id="@+id/imageView6"
                             android:layout_width="0dp"
@@ -70,7 +70,7 @@
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/hangeul_3" />
 
@@ -115,9 +115,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        android:text="the Hangul education site created by foreigners"
+                        android:text="King Sejong Institute Foundation"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_justLink" />
+                        app:layout_constraintTop_toBottomOf="@+id/iv_about_contents_main" />
 
 
                 <TextView
@@ -135,13 +135,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp"
                         android:autoLink="web"
                         android:linksClickable="true"
-                        android:text="@string/langintro"
+                        android:text="@string/nuri_sejong_hakdang"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/tv_nieun"
                         app:layout_constraintTop_toBottomOf="@+id/tv_link_info" />
 
-                <TextView
+
+                <ImageView
+                        android:id="@+id/iv_about_contents_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_justLink"
+                        app:srcCompat="@drawable/about_contents_main" />
+
+               <!-- <TextView
                         android:id="@+id/tv_link_info2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -203,7 +216,7 @@
                         android:text="@string/vank"
                         app:layout_constraintStart_toEndOf="@+id/tv_nieun3"
                         app:layout_constraintTop_toBottomOf="@+id/tv_link_info3" />
-
+-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

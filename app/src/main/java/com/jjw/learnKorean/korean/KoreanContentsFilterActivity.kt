@@ -35,7 +35,7 @@ class KoreanContentsFilterActivity :AppCompatActivity(){
 
             val disp = applicationContext.resources.displayMetrics
             val width = disp.widthPixels
-            val height = (disp.heightPixels * 0.7).toInt()
+            val height = (disp.heightPixels * 0.6).toInt()
             var contentsList = ArrayList<String>()
             window.attributes.width = width
             window.attributes.height = height

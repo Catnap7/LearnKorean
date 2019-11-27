@@ -16,7 +16,6 @@ class MainAdapter(fm: FragmentManager) : androidx.fragment.app.FragmentStatePage
             1 ->  PlaylistFragment()
             2 ->  HistoryFragment()
             else -> null
-
         }
     }
 
