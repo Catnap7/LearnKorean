@@ -10,7 +10,7 @@ import com.jjw.learnKorean.main.MainFragment
 import com.jjw.learnKorean.notice.NoticeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnKorean.settings.SettingsFragment
-import com.uxcam.UXCam;
+import com.uxcam.UXCam
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,14 +20,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //UXCam 트래킹 시작
+        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
+
         //구글 애드몹 광고 추가
         MobileAds.initialize(this) {}
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
-
-        //UXCam 트래킹 시작
-        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
 
         //첫화면 지정
         MainFragment().let {

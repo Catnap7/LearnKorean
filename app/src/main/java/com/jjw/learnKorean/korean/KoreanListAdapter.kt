@@ -3,6 +3,10 @@ package com.jjw.learnKorean.korean
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color.parseColor
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +14,12 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.SimpleTarget
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_korean_main.view.*
-import android.graphics.drawable.Drawable
-import com.bumptech.glide.request.target.SimpleTarget
-import android.graphics.PorterDuff
-import android.graphics.Color.parseColor
+import com.google.firebase.storage.FirebaseStorage
+import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
 
 
 class KoreanListAdapter(private val context: Context, private val koreanContentsList: ArrayList<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){
@@ -31,10 +35,51 @@ class KoreanListAdapter(private val context: Context, private val koreanContents
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         activity = context as Activity
-
         holder.tv_VideoName.text = koreanContentsList[position]
 
-        val backGroundId = context.resources.getIdentifier("korean_contents_$position", "drawable", context.packageName)
+        val fs = FirebaseStorage.getInstance()
+        val imagesRef = fs.reference.child("KoreanContentsList/korean_contents_$position.jpg")
+
+        //imagesRef에서 파일 다운로드 URL 가져옴
+        imagesRef.downloadUrl.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // Glide 이용하여 이미지뷰에 로딩
+                Glide.with(activity)
+                    .load(task.result)
+                    .into(
+                        object : SimpleTarget<Drawable>() {
+                        override fun onResourceReady(
+                            resource: Drawable,
+                            transition: com.bumptech.glide.request.transition.Transition<in Drawable>?) {
+                            holder.layout_contents.background = resource
+                            holder.layout_contents.background.setColorFilter(
+                                parseColor("#BDBDBD"),
+                                PorterDuff.Mode.MULTIPLY
+                            )
+                        }
+                    })
+            } else {
+                // URL을 가져오지 못하면 토스트 메세지
+                Toast.makeText(activity, task.exception!!.message, Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        /*Glide.with(context)
+            .load(imagesRef)
+            .into(
+                object : SimpleTarget<Drawable>() {
+                override fun onResourceReady(
+                    resource: Drawable,
+                    transition: com.bumptech.glide.request.transition.Transition<in Drawable>?) {
+                    holder.layout_contents.background = resource
+                    holder.layout_contents.background.setColorFilter(
+                        parseColor("#BDBDBD"),
+                        PorterDuff.Mode.MULTIPLY
+                    )
+                }
+            })*/
+/*
 
         //배경이미지 삽입
         Glide.with(context).load(backGroundId).into(object : SimpleTarget<Drawable>() {
@@ -45,6 +90,7 @@ class KoreanListAdapter(private val context: Context, private val koreanContents
                 holder.layout_contents.background.setColorFilter(parseColor("#BDBDBD"), PorterDuff.Mode.MULTIPLY)
             }
         })
+*/
 
         holder.layout_contents.setOnClickListener {
 

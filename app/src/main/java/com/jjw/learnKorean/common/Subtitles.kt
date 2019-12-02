@@ -2,7 +2,6 @@ package com.jjw.learnKorean.common
 
 class Subtitles {
 
-
      //진정국 하트
      val N76HNPfI4zs_time = arrayOf(5,10,15,23,28,32,34,47,51,54,65,66)
     val N76HNPfI4zs = arrayOf("[00:05] 하트","[00:10] 하트","[00:15] 하트 하트으으~ ","[00:23] 휴지로 하트를 접고 싶은데 어떻게접는지 모르겠어요",
@@ -26,14 +25,20 @@ class Subtitles {
     val wksUmcAx7z4_sub = arrayOf("RM is reading a book hard. Watch him reading")
     val wksUmcAx7z4_diction = arrayOf("RMeun yeolsimhi chaegeul ilkneun jungipnida. dokseohaneun geureul jikyeobwajuseyo ")
 
-    val A4lKqFR_67RI = arrayOf("추후 업데이트 예정입니다 조금만 기다려주세요","으으음~~")
-    val A4lKqFR_67RI_time = arrayOf(5)
-    val A4lKqFR_67RI_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
-    val A4lKqFR_67RI_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
+    // [BANGTAN BOMB] '풍경' Special LIVE - BTS (방탄소년단)       변수명 첫 시작을 숫자로 지을수없어서 A 추가함
+    val A4lKqFR_67RI = arrayOf("풍경 프로듀서님입니다","크으~~~","태형이형 이거 퓽경아냐 풍경?","맞아","별이 가득한 공기에","나나나 그대를 그려요","내안에 잠이 올까요","가사 까먹었어??","새벽 달이 지난 공원에","지금 내 감정을 담아요","이 노랜 그댈 향해요","밤하늘 달에게 비춰진","필름의 소리를 들어요","I still wonder wonder beautiful story","Still wonder wonder best part","I still wander wander next story",
+                                "I want to make you mine")
+    val A4lKqFR_67RI_time = arrayOf(4,17,22,23,24,30,32,35,39,43,46,55,59,69,75,82,88)
+    val A4lKqFR_67RI_sub = arrayOf("He's a ‘풍경(Scenery)’producer","Cool~~~","Taehyung, isn't this a Scenery?","That’s right","in the air full of stars","Na na na~~ I draw you~","Will I fall asleep inside?","Did you forget the lyrics?","In the park that passed the early morning moon","I want you to put my feelings in it right now"
+                                ,"I'm heading for you, this song","reflected by the night sky moon","Listen to the sound of the film","I still wonder wonder beautiful story","Still wonder wonder best part","I still wander wander next story","I want to make you mine")
+    val A4lKqFR_67RI_diction = arrayOf("punggyeong peurodyuseonimipnida","keueu~~~","taehyeongihyeong igeo pyunggyeonganya punggyeong?","maja","byeori gadeukhan gonggie","nanana geudaereul geuryeoyo","naeane jami olkkayo","gasa kkameogeosseo??","saebyeok dari jinan gongwone","jigeum nae gamjeongeul damayo","i noraen geudael hyanghaeyo","bamhaneul darege bichwojin"
+                                ,"pilleumui sorireul deureoyo","I still wonder wonder beautiful story","Still wonder wonder best part","I still wander wander next story","I want to make you mine")
 
-    val A3_FXW0CW_8o = arrayOf("추후 업데이트 예정입니다 ㅠㅠ 조금만 기다려주세요","으으음~~")
-    val A3_FXW0CW_8o_time = arrayOf(5)
-    val A3_FXW0CW_8o_sub = arrayOf("We're going to update later. ㅠㅠ Please wait a moment")
+    //[BANGTAN BOMB] V&Jungkook Singing at standby time - BTS (방탄소년단)
+    val A3_FXW0CW_8o = arrayOf("매일 울려 이 노래가","널 떠올리게 만들어","다 우리 얘기만 같아서","아무리 귀를 막아봐도","자꾸 맴돌아","또 매일 울려 이 노래가","널 떠올리게 만들어","다 우리 얘기만 같아서","아무리 귀를 막아봐도","자꾸 맴돌아","듣고 싶지 않아 몸부림 쳐도","매일 듣는 노래","그 노래말은 꼭 우리가 됐고","그렇게 남은건 남겨진 하루들","아주 작은방 홀로","조심스레 다시","널 불러본다~~","정국이 완전히 노래방왔네 지금 ㅋ")
+    val A3_FXW0CW_8o_time = arrayOf(1,5,7,11,17,20,23,26,32,36,39,45,49,54,60,68,70,77)
+    val A3_FXW0CW_8o_sub = arrayOf("It makes me cry every day","It makes me think of you","Because it sounds like our story","No matter how hard I try to cover my ears","It spins around me","It makes me cry every day","It makes me think of you","Because it sounds like our story","No matter how hard I try to cover my ears","It spins around me"
+                                ,"I don’t wanna hear it, I throw a fit","But I hear it every day","The lyrics used to sound like someone else’s story but it became ours","The only thing remaining are the ruined days","Playing this song in my small room","carefully again","I'm calling you","Jungkook is in karaoke now")
     val A3_FXW0CW_8o_diction = arrayOf("chuhu eopdeiteu yejeongipnida ㅠㅠ jogeumman gidaryeojuseyo ")
 
     val gqvEO6o1Mx8 = arrayOf("추후 업데이트 예정입니다 ㅠㅠ조금만 기다려주세요 ","으으음~~")

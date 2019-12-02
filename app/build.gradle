@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
 
 android {
 
@@ -28,6 +29,9 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -54,15 +58,20 @@ dependencies {
 
     //이미지
     implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
 
     //firebase
     implementation 'com.google.firebase:firebase-analytics:17.2.1'
     implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.2'
+
 
     implementation 'com.google.firebase:firebase-perf:19.0.2'
 
     //모바일 UX 트래킹
     implementation 'com.uxcam:uxcam:3.1.10@aar'
+    implementation 'com.google.firebase:firebase-firestore:21.3.0'
 
 }

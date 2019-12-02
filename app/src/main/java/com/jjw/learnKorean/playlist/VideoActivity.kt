@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
+import com.google.firebase.firestore.FirebaseFirestore
 import com.jjw.learnKorean.R
 import com.jjw.learnKorean.common.Subtitles
 import kotlinx.android.synthetic.main.activity_playlist_video.*
@@ -20,6 +21,7 @@ class VideoActivity  : AppCompatActivity() {
     private var timer:Int = -2
     private var position:Int = 0
     private lateinit var videoId:String
+    private val db:FirebaseFirestore  = FirebaseFirestore.getInstance()
 
     private val youtubeListener = object: YouTubePlayer.OnInitializedListener{
 
@@ -128,7 +130,6 @@ class VideoActivity  : AppCompatActivity() {
                 koreanSubtitlesDiction = sub.fgja5tdRB8o_diction
             }
         }
-
 
         val thread = Thread(Runnable {
             while (threadStopflag) {
