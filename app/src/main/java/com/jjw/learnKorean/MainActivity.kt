@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //UXCam 트래킹 시작
-        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
+        //TODO UXCam 트래킹 시작
+//        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
 
         //구글 애드몹 광고 추가
         MobileAds.initialize(this) {}

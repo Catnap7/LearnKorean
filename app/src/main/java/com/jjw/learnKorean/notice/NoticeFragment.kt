@@ -14,16 +14,10 @@ import com.jjw.learnKorean.R
 
 
         return noticeView
-
-
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
     }
-
-
-
-
 }

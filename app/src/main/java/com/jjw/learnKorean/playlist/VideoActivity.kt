@@ -70,6 +70,11 @@ class VideoActivity  : AppCompatActivity() {
             replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
             commit()
         }
+
+       /* //지금은 포지션 번호에 따라서 VideoId 를 선별하는데, 이거 나중에 서버 붙일때 바꿔야됨
+        position = if(intent.hasExtra("position")) {
+            intent.getStringExtra("position").toInt()
+        }else 0*/
     }
 
     private fun startSubtitles(){
@@ -80,50 +85,50 @@ class VideoActivity  : AppCompatActivity() {
         lateinit var koreanSubtitlesDiction:Array<String>
         lateinit var subtitles:Array<String>
 
-        when(position){
-            0 -> {
+        when(videoId){
+            "N76HNPfI4zs" -> {
                 koreanSub = sub.N76HNPfI4zs
                 koreanSubTime = sub.N76HNPfI4zs_time
                 subtitles = sub.N76HNPfI4zs_sub
                 koreanSubtitlesDiction = sub.N76HNPfI4zs_diction
             }
-            1 -> {
-                koreanSub = sub.mw_JgIonmD8
-                koreanSubTime = sub.mw_JgIonmD8_time
-                subtitles = sub.mw_JgIonmD8_sub
-                koreanSubtitlesDiction = sub.mw_JgIonmD8_diction
+            "RoepaDKQ0PQ" -> {
+                koreanSub = sub.RoepaDKQ0PQ
+                koreanSubTime = sub.RoepaDKQ0PQ_time
+                subtitles = sub.RoepaDKQ0PQ_sub
+                koreanSubtitlesDiction = sub.RoepaDKQ0PQ_diction
             }
-            2 -> {
+            "wksUmcAx7z4" -> {
                 koreanSub = sub.wksUmcAx7z4
                 koreanSubTime = sub.wksUmcAx7z4_time
                 subtitles = sub.wksUmcAx7z4_sub
                 koreanSubtitlesDiction = sub.wksUmcAx7z4_diction
             }
-            3 -> {
+            "4lKqFR-67RI" -> {
                 koreanSub = sub.A4lKqFR_67RI
                 koreanSubTime = sub.A4lKqFR_67RI_time
                 subtitles = sub.A4lKqFR_67RI_sub
                 koreanSubtitlesDiction = sub.A4lKqFR_67RI_diction
             }
-            4 -> {
+            "3-FXW0CW_8o" -> {
                 koreanSub = sub.A3_FXW0CW_8o
                 koreanSubTime = sub.A3_FXW0CW_8o_time
                 subtitles = sub.A3_FXW0CW_8o_sub
                 koreanSubtitlesDiction = sub.A3_FXW0CW_8o_diction
             }
-            5 -> {
+            "gqvEO6o1Mx8" -> {
                 koreanSub = sub.gqvEO6o1Mx8
                 koreanSubTime = sub.gqvEO6o1Mx8_time
                 subtitles = sub.gqvEO6o1Mx8_sub
                 koreanSubtitlesDiction = sub.gqvEO6o1Mx8_diction
             }
-            6 -> {
+            "FsEGaURjZ8w" -> {
                 koreanSub = sub.FsEGaURjZ8w
                 koreanSubTime = sub.FsEGaURjZ8w_time
                 subtitles = sub.FsEGaURjZ8w_sub
                 koreanSubtitlesDiction = sub.FsEGaURjZ8w_diction
             }
-            7 -> {
+            "fgja5tdRB8o" -> {
                 koreanSub = sub.fgja5tdRB8o
                 koreanSubTime = sub.fgja5tdRB8o_time
                 subtitles = sub.fgja5tdRB8o_sub

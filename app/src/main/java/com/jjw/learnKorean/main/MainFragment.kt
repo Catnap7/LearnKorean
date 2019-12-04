@@ -17,7 +17,6 @@ class MainFragment : androidx.fragment.app.Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
          val mainView = inflater.inflate(R.layout.activity_main_main,container, false)
 
-
         mainView.vpMainActivity.adapter = adapter
 
         // 탭 레이아웃에 뷰페이저 연결
