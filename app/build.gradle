@@ -65,7 +65,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:17.2.1'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.firebaseui:firebase-ui-storage:3.2.2'
-
     implementation 'com.google.firebase:firebase-perf:19.0.2'
 
     //모바일 UX 트래킹
