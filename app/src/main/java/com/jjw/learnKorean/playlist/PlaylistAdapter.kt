@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.card_playlist.view.*
 import androidx.core.app.ActivityOptionsCompat
 
 
-class PlaylistAdapter(private val context:Context, private val playlist: ArrayList<String>,private val playlist_title: Array<String>) : RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
+class PlaylistAdapter(private val context:Context, private val playlist: ArrayList<String>,private val playlist_title: ArrayList<String>) : RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
 
      override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 

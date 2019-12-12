@@ -22,7 +22,7 @@ class Subtitles {
 
     //RM 생일
     val wksUmcAx7z4 = arrayOf("음 맛있어","으으음~~","남준이 오늘 생일입니다","남준 오늘 생일이야","아 지금 투어때 지민이랑 남준이가 생일이구나","형 특별하게 생일이 이틀이네요?","시간보면 한국 내일로 뜨잖아요","아 아 거기가 지금 일이니까","남준이 깜짝 생일파티 한번만 준비해주세요","남준아 어떤 케익 먹고싶냐?","반복된 치즈케익~","남준아 깜짝 생일파티 언제해줄까?","너가 원할때 해줄게","아악!!","너 생일축하노래 불러준다",
-                                "고맙다!","해피 벌스데이 투 준~~","해피벌스데이 ~","갑자기?","해피 벌스데이 남준쓰~","너무 고맙다 진짜","해피 벌스데이 마이 브로~~~","해피 벌스데이 투 유~~! ♬","화음 쩔었지?")
+                                "고맙다!","해피 벌스데이 투 준~~","해피벌스데이 ~","갑자기?","해피 벌스데이 남준쓰~","너무 고맙다 진짜","해피 벌스데이 마이 브로~~~","해피 벌스데이 투 유~~! ♬","화음 쩔었지?","우리 아무생각 안하고","생일빵!! 아악!!")
     val wksUmcAx7z4_time = arrayOf(1,5,11,13,17,20,22,26,31,33,35,40,42,46,52,53,54,57,58,59,63,65,66,67,68,73,80,88,90)
     val wksUmcAx7z4_sub = arrayOf("Mmm. Delicious","Mmm~~","Nam Jun is today's birthday","Nam Jun Today's Birthday","Oh, I see Ji Min and Nam Jun’s birthday on the tour","You have a special birthday for two days?","No, it will be tomorrow in Korea when you look at the time","Oh, that's the 12th of the day","Please prepare for Nam Jun's surprise birthday party", "What kind of cake do you want?",
                                     "As expected, BT21 is good for cake","Haha, repeated cheesecake~","Nam Jun, when do you want to have a surprise birthday party?"," I'll do it when you want","Fans sing you a birthday song. Nam Jun","Huh?","Fans sing your birthday song","Hit when is someone's birthdayIt's like a present","Tnx!","Happy Birthday to June~~","Happy Birthday~"

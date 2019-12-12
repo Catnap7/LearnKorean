@@ -2,6 +2,7 @@ package com.jjw.learnKorean.playlist
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -10,9 +11,9 @@ import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jjw.learnKorean.R
-import com.jjw.learnKorean.common.Subtitles
 import kotlinx.android.synthetic.main.activity_playlist_video.*
 
+@Suppress("UNCHECKED_CAST")
 class VideoActivity  : AppCompatActivity() {
 
     private lateinit var mYoutubePlayerFragment : YouTubePlayerSupportFragment
@@ -21,7 +22,11 @@ class VideoActivity  : AppCompatActivity() {
     private var timer:Int = -2
     private var position:Int = 0
     private lateinit var videoId:String
-    private val db:FirebaseFirestore  = FirebaseFirestore.getInstance()
+    private val db:FirebaseFirestore = FirebaseFirestore.getInstance()
+    private lateinit var koreanSub:ArrayList<String>
+    private lateinit var koreanSubTime:ArrayList<String>
+    private lateinit var koreanSubtitlesDiction:ArrayList<String>
+    private lateinit var subtitles:ArrayList<String>
 
     private val youtubeListener = object: YouTubePlayer.OnInitializedListener{
 
@@ -38,13 +43,13 @@ class VideoActivity  : AppCompatActivity() {
                 //디버깅용
 //                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
                 //배포용
-                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS)
+              youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS)
 
                 //TODO cuevideo 동영상만 로드 밑에꺼는 바로 실행됨
                 //디버깅용
 //                youtubePlayer.cueVideo(videoId)
                 //배포용
-                youtubePlayer.loadVideo(videoId)
+              youtubePlayer.loadVideo(videoId)
 
                 //전체화면 버튼 숨김
                 youtubePlayer.setShowFullscreenButton(false)
@@ -71,78 +76,42 @@ class VideoActivity  : AppCompatActivity() {
             commit()
         }
 
-       /* //지금은 포지션 번호에 따라서 VideoId 를 선별하는데, 이거 나중에 서버 붙일때 바꿔야됨
-        position = if(intent.hasExtra("position")) {
-            intent.getStringExtra("position").toInt()
-        }else 0*/
+        getSubtitle()
+
+    }
+
+    private fun getSubtitle(){
+
+        val docRef = db.collection("LearnKorean").document("Videos").collection(videoId).document("Subtitle")
+
+        docRef.get().addOnSuccessListener { document ->
+
+            if (document != null) {
+                Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+
+                subtitles = document.data!!["eng_sub"] as ArrayList<String>
+                koreanSubtitlesDiction = document.data!!["eng_dic"] as ArrayList<String>
+                koreanSub  = document.data!!["kor_sub"] as ArrayList<String>
+                koreanSubTime = document.data!!["time"] as ArrayList<String>
+            } else {
+                Log.d(TAG, "No such document")
+            }
+        }
+            .addOnFailureListener { exception ->
+                Log.d(TAG, "get failed with ", exception)
+            }
     }
 
     private fun startSubtitles(){
-        val sub = Subtitles()
+
         var subIndex = 0
-        lateinit var koreanSub:Array<String>
-        lateinit var koreanSubTime:Array<Int>
-        lateinit var koreanSubtitlesDiction:Array<String>
-        lateinit var subtitles:Array<String>
-
-        when(videoId){
-            "N76HNPfI4zs" -> {
-                koreanSub = sub.N76HNPfI4zs
-                koreanSubTime = sub.N76HNPfI4zs_time
-                subtitles = sub.N76HNPfI4zs_sub
-                koreanSubtitlesDiction = sub.N76HNPfI4zs_diction
-            }
-            "RoepaDKQ0PQ" -> {
-                koreanSub = sub.RoepaDKQ0PQ
-                koreanSubTime = sub.RoepaDKQ0PQ_time
-                subtitles = sub.RoepaDKQ0PQ_sub
-                koreanSubtitlesDiction = sub.RoepaDKQ0PQ_diction
-            }
-            "wksUmcAx7z4" -> {
-                koreanSub = sub.wksUmcAx7z4
-                koreanSubTime = sub.wksUmcAx7z4_time
-                subtitles = sub.wksUmcAx7z4_sub
-                koreanSubtitlesDiction = sub.wksUmcAx7z4_diction
-            }
-            "4lKqFR-67RI" -> {
-                koreanSub = sub.A4lKqFR_67RI
-                koreanSubTime = sub.A4lKqFR_67RI_time
-                subtitles = sub.A4lKqFR_67RI_sub
-                koreanSubtitlesDiction = sub.A4lKqFR_67RI_diction
-            }
-            "3-FXW0CW_8o" -> {
-                koreanSub = sub.A3_FXW0CW_8o
-                koreanSubTime = sub.A3_FXW0CW_8o_time
-                subtitles = sub.A3_FXW0CW_8o_sub
-                koreanSubtitlesDiction = sub.A3_FXW0CW_8o_diction
-            }
-            "gqvEO6o1Mx8" -> {
-                koreanSub = sub.gqvEO6o1Mx8
-                koreanSubTime = sub.gqvEO6o1Mx8_time
-                subtitles = sub.gqvEO6o1Mx8_sub
-                koreanSubtitlesDiction = sub.gqvEO6o1Mx8_diction
-            }
-            "FsEGaURjZ8w" -> {
-                koreanSub = sub.FsEGaURjZ8w
-                koreanSubTime = sub.FsEGaURjZ8w_time
-                subtitles = sub.FsEGaURjZ8w_sub
-                koreanSubtitlesDiction = sub.FsEGaURjZ8w_diction
-            }
-            "fgja5tdRB8o" -> {
-                koreanSub = sub.fgja5tdRB8o
-                koreanSubTime = sub.fgja5tdRB8o_time
-                subtitles = sub.fgja5tdRB8o_sub
-                koreanSubtitlesDiction = sub.fgja5tdRB8o_diction
-            }
-        }
-
         val thread = Thread(Runnable {
             while (threadStopflag) {
                 try {
                     handler.post {
 
 //                        tv_VideoName.text=timer.toString()
-                        if(koreanSubTime.contains(timer)) {
+                        if(koreanSubTime.contains("$timer")) {
                             tv_koreanSubtitles.text = koreanSub[subIndex]
                             tv_koreanSubtitlesDiction.text = koreanSubtitlesDiction[subIndex]
                             tv_subtitles.text = subtitles[subIndex]
@@ -202,5 +171,5 @@ class VideoActivity  : AppCompatActivity() {
         }
     }
 
-
+    companion object { var TAG = "VideoActivity" }
 }
