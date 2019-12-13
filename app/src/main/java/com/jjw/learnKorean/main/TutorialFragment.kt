@@ -54,7 +54,7 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getFirestoreTutorial()
+//        getFirestoreTutorial()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -78,6 +78,8 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
 //        tv_subtitles.text = "fragment_main_tutorial"
     }
 
+    /*
+        title도 firebase 에서 받아오도록 설정할랬는데 메인스레드에서 너무 많은 일을 한다고해서 일단 보류함
     private fun getFirestoreTutorial() {
 
         db.collection("LearnKorean").document("Videos").let {
@@ -112,7 +114,7 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
                     Log.d(TAG, "get failed with ", exception)
                 }
         }
-    }
+    }*/
 
         private fun init() {
 
