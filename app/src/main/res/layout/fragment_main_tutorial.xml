@@ -40,7 +40,6 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="16dp" android:layout_marginEnd="16dp">
 
-
         <TextView
                 android:id="@+id/tv_VideoTitle"
                 android:layout_width="wrap_content"
@@ -63,7 +62,7 @@
 
         <TextView
                 android:id="@+id/tv_koreanSubtitles"
-                android:text="(대충 한국어 자막이라는 글)"
+                android:text="(한글 자막)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -72,7 +71,7 @@
                 android:layout_marginStart="16dp"/>
         <TextView
                 android:id="@+id/tv_koreanSubtitlesDiction"
-                android:text="daechung hangook ah jammak e ranen det det "
+                android:text="hangeul jammack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/lightgray"

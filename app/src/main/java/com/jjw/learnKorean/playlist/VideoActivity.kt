@@ -57,7 +57,6 @@ class VideoActivity  : AppCompatActivity() {
         }
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playlist_video)
@@ -125,7 +124,6 @@ class VideoActivity  : AppCompatActivity() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
-
             }
         })
 
@@ -157,9 +155,7 @@ class VideoActivity  : AppCompatActivity() {
         override fun onLoading() {
         }
 
-        override fun onVideoStarted() {
-            startSubtitles()
-        }
+        override fun onVideoStarted() = startSubtitles()
 
         override fun onLoaded(p0: String?) {
         }

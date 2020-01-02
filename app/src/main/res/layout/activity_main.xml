@@ -40,7 +40,7 @@
             app:itemIconSize="24dp"
             app:itemIconTint="@color/bb_darkBackgroundColor"
             app:itemTextColor="@color/bb_darkBackgroundColor"
-            app:labelVisibilityMode="unlabeled"
+            app:labelVisibilityMode="selected"
             app:layout_behavior="tech.thdev.app.view.BottomNavigationBehavior"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

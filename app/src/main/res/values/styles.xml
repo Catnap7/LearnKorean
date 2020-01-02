@@ -55,6 +55,11 @@
         <item name="android:textColor">@color/learnKorean_maintext_color</item>
     </style>
 
+    <style name="Text_black_70_10dp">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/bts_fakeLove_line_color</item>
+    </style>
+
     <style name="Text_black_12dp">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/learnKorean_maintext_color</item>

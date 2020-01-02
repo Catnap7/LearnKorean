@@ -20,13 +20,13 @@ import kotlinx.android.synthetic.main.fragment_main_tutorial.view.*
 @Suppress("UNCHECKED_CAST")
 class TutorialFragment : androidx.fragment.app.Fragment() {
 
-    private lateinit var videoID:String
-    private lateinit var videoTitle :String
+    private var videoID:String = "XsX3ATc3FbA"
+    private var videoTitle :String = "BTS (방탄소년단) '작은 것들을 위한 시 (Boy With Luv) feat. Halsey' Official MV"
     private lateinit var mYoutubePlayerFragment: YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
     private var timer: Int = -2
-    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
+//    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
     private lateinit var koreanSub:ArrayList<String>
     private lateinit var koreanSubTime:ArrayList<String>
     private lateinit var koreanSubtitlesDiction:ArrayList<String>
