@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //TODO UXCam 트래킹 시작
-//        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
+        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
 
         //구글 애드몹 광고 추가
         MobileAds.initialize(this) {}
@@ -39,13 +39,13 @@ class MainActivity : AppCompatActivity() {
             val settingsFragment = SettingsFragment()
             val mainFragment = MainFragment()
             val koreanFragment = KoreanFragment()
-            val noticeFragment = NoticeFragment()
+//            val noticeFragment = NoticeFragment()
             val transaction = supportFragmentManager.beginTransaction()
 
             when(item.itemId){
                 R.id.tab_home -> transaction.replace(R.id.contentContainer,mainFragment).commitAllowingStateLoss()
                 R.id.tab_korean -> transaction.replace(R.id.contentContainer, koreanFragment).commitAllowingStateLoss()
-                R.id.tab_notice -> transaction.replace(R.id.contentContainer, noticeFragment).commitAllowingStateLoss()
+//                R.id.tab_notice -> transaction.replace(R.id.contentContainer, noticeFragment).commitAllowingStateLoss()
                 R.id.tab_settings -> transaction.replace(R.id.contentContainer, settingsFragment).commitAllowingStateLoss()
             }
             return@setOnNavigationItemSelectedListener true

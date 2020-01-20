@@ -19,13 +19,14 @@
 
     <!--TODO 배너광고 (테스트할땐 banner id 뒤에 _for_test 붙이면됨)-->
     <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            app:adSize="BANNER"
-            app:adUnitId="@string/banner_ad_unit_id_for_test"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
             app:layout_constraintBottom_toTopOf="@+id/bottomBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
