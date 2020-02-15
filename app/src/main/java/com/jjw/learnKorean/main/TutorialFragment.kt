@@ -14,19 +14,21 @@ import com.google.android.youtube.player.YouTubePlayerSupportFragment
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jjw.learnKorean.common.Subtitles
 import com.jjw.learnKorean.playlist.VideoActivity
+import com.uxcam.internals.db
+import com.uxcam.internals.it
 import kotlinx.android.synthetic.main.fragment_main_tutorial.*
 import kotlinx.android.synthetic.main.fragment_main_tutorial.view.*
 
 @Suppress("UNCHECKED_CAST")
 class TutorialFragment : androidx.fragment.app.Fragment() {
 
-    private var videoID:String = "XsX3ATc3FbA"
-    private var videoTitle :String = "BTS (방탄소년단) '작은 것들을 위한 시 (Boy With Luv) feat. Halsey' Official MV"
+    private val videoID:String = "v-d_HYStn5U"
+    private val videoTitle :String = "[BANGTAN BOMB] BTS' Mukbang! - BTS (방탄소년단)"
     private lateinit var mYoutubePlayerFragment: YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
     private var timer: Int = -2
-//    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
     private lateinit var koreanSub:ArrayList<String>
     private lateinit var koreanSubTime:ArrayList<String>
     private lateinit var koreanSubtitlesDiction:ArrayList<String>
@@ -54,7 +56,7 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        getFirestoreTutorial()
+        getFirestoreTutorial()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -78,25 +80,8 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
 //        tv_subtitles.text = "fragment_main_tutorial"
     }
 
-    /*
-        title도 firebase 에서 받아오도록 설정할랬는데 메인스레드에서 너무 많은 일을 한다고해서 일단 보류함
     private fun getFirestoreTutorial() {
-
-        db.collection("LearnKorean").document("Videos").let {
-            it.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    Log.d(TAG, "DocumentSnapshot data: ${document.data}")
-
-                    videoID = document.data!!["tutorial"] as String
-                    videoTitle = document.data!!["tutorial_title"] as String
-
-                } else {
-                    Log.d(TAG, "No such document")
-                }
-            }
-        }
-
-        db.collection("LearnKorean").document("Videos").collection("XsX3ATc3FbA").document("Subtitle").let{
+        db.collection("LearnKorean").document("Videos").collection(videoID).document("Subtitle").let{
             it.get().addOnSuccessListener { document ->
 
                 if (document != null) {
@@ -114,7 +99,7 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
                     Log.d(TAG, "get failed with ", exception)
                 }
         }
-    }*/
+    }
 
         private fun init() {
 

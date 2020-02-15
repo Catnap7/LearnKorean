@@ -8,14 +8,14 @@ class MainAdapter(fm: FragmentManager) : androidx.fragment.app.FragmentStatePage
 
     private val fragmentTitleList = mutableListOf("main","playlist","history")
 
-    override fun getItem(p0: Int): Fragment? {
+    override fun getItem(p0: Int): Fragment {
 
         return when(p0){
 
             0 ->  TutorialFragment()
             1 ->  PlaylistFragment()
             2 ->  HistoryFragment()
-            else -> null
+            else -> TutorialFragment()
         }
     }
 
