@@ -17,7 +17,7 @@ import com.jjw.learnKorean.http.WsHttpClient;
  * Created by zinang on 2018. 1. 11..
  */
 
-public class WebViewActivity extends ToolBarActivity {
+public class WebViewActivity extends ToolBarActivity {//병합하기
 
     private final String TAG = this.getClass().getSimpleName();
     private static final String FinishActivity = "MainActivity";
