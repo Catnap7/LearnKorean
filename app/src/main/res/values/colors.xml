@@ -50,6 +50,10 @@
     <color name="bts_run_line_color">#ffffff</color>
     <color name="bts_run_background_color">#ADD9EA</color>
 
+    <!--  MAP OF THE SOUL: 7 -->
+    <color name="bts_on_line_color">#4096D3</color>
+    <color name="bts_on_background_color">#F9D915</color>
+
 
 
 

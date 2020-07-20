@@ -1,192 +1,83 @@
 package com.jjw.learnKorean.main
 
-
+import android.graphics.Color.parseColor
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.os.Handler
-import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
-import com.google.android.youtube.player.YouTubeInitializationResult
-import com.google.android.youtube.player.YouTubePlayer
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.SimpleTarget
+import com.google.firebase.storage.FirebaseStorage
 import com.jjw.learnKorean.R
-import com.google.android.youtube.player.YouTubePlayerSupportFragment
-import com.google.firebase.firestore.FirebaseFirestore
-import com.jjw.learnKorean.common.Subtitles
-import com.jjw.learnKorean.playlist.VideoActivity
-import com.uxcam.internals.db
-import com.uxcam.internals.it
 import kotlinx.android.synthetic.main.fragment_main_tutorial.*
-import kotlinx.android.synthetic.main.fragment_main_tutorial.view.*
+import java.util.*
 
-@Suppress("UNCHECKED_CAST")
 class TutorialFragment : androidx.fragment.app.Fragment() {
 
-    private val videoID:String = "v-d_HYStn5U"
-    private val videoTitle :String = "[BANGTAN BOMB] BTS' Mukbang! - BTS (방탄소년단)"
-    private lateinit var mYoutubePlayerFragment: YouTubePlayerSupportFragment
-    private var threadStopflag = true
-    private var handler = Handler()
-    private var timer: Int = -2
-    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private lateinit var koreanSub:ArrayList<String>
-    private lateinit var koreanSubTime:ArrayList<String>
-    private lateinit var koreanSubtitlesDiction:ArrayList<String>
-    private lateinit var subtitles:ArrayList<String>
+    val QuizNum = 1
+    val progressValue = 0
 
-    private val youtubeListener = object : YouTubePlayer.OnInitializedListener {
-
-        override fun onInitializationFailure(p0: YouTubePlayer.Provider?, p1: YouTubeInitializationResult?) {
-            Toast.makeText(context, "Content load fail..", Toast.LENGTH_SHORT).show()
-        }
-
-        override fun onInitializationSuccess(p0: YouTubePlayer.Provider?, youtubePlayer: YouTubePlayer, isReady: Boolean) {
-            if (!isReady) {
-                youtubePlayer.setPlaybackEventListener(playbackEventListener)
-                youtubePlayer.setPlayerStateChangeListener(playerStateChangeListener)
-                //플레이어 스타일 설정 CHROMELESS ( 동영상 진행 progressbar 및 멈춤기능없음), minimal (멈춤이랑 progressbar만 있음)
-                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
-                youtubePlayer.cueVideo(videoID)
-
-                //전체화면 버튼 숨김
-                youtubePlayer.setShowFullscreenButton(false)
-            }
-        }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        getFirestoreTutorial()
-    }
+//    이 방법은 FirebaseStorage 에서 이미지 받아와서 그려주는방법인데 조금 느림
+    val fs = FirebaseStorage.getInstance()
+    val imagesRef = fs.reference.child("TutorialQuiz/quiz_$QuizNum.PNG")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val tutorialView = inflater.inflate(R.layout.fragment_main_tutorial, container, false)
+        val tutorialView:View =  inflater.inflate(R.layout.fragment_main_tutorial,container, false)
 
-        //화면 클릭하면 멈추고 뭐 이런거 달려고 했는데 굳이 안해도 될듯
-//        view.layout_youtube.setOnClickListener(youtubeClickListener)
-        init()
-        tutorialView.tv_VideoTitle.text = videoTitle
+        getQuizImg()
+
+        progress()
         return tutorialView
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        //뷰 설정
-    }
-
-    private val youtubeClickListener = View.OnClickListener {
-        //        mYoutubePlayer.pause()
-//        tv_subtitles.text = "fragment_main_tutorial"
-    }
-
-    private fun getFirestoreTutorial() {
-        db.collection("LearnKorean").document("Videos").collection(videoID).document("Subtitle").let{
-            it.get().addOnSuccessListener { document ->
-
-                if (document != null) {
-                    Log.d(TAG, "DocumentSnapshot data: ${document.data}")
-
-                    subtitles = document.data!!["eng_sub"] as ArrayList<String>
-                    koreanSubtitlesDiction = document.data!!["eng_dic"] as ArrayList<String>
-                    koreanSub  = document.data!!["kor_sub"] as ArrayList<String>
-                    koreanSubTime = document.data!!["time"] as ArrayList<String>
-                } else {
-                    Log.d(TAG, "No such document")
+    fun progress() {
+        Thread(Runnable {
+            for (i in 0..5) {
+                Runnable {
+                    // 화면에 변경하는 작업을 구현
+                    quiz_progressBar.progress = progressValue
+                }
+                try {
+                    Thread.sleep(100)
+                } catch (e: InterruptedException) {
+                    e.printStackTrace()
                 }
             }
-                .addOnFailureListener { exception ->
-                    Log.d(TAG, "get failed with ", exception)
-                }
-        }
+        }).start()
     }
 
-        private fun init() {
 
-            mYoutubePlayerFragment = YouTubePlayerSupportFragment()
-            mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
 
-            fragmentManager!!.beginTransaction().apply {
-                replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
-                commit()
-            }
-
-            activity!!.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        }
-
-        private fun startSubtitles() {
-            var subIndex = 0
-
-            val thread = Thread(Runnable {
-                while (threadStopflag) {
-                    try {
-                        handler.post {
-
-                            if (koreanSubTime.contains("$timer")) {
-                                tv_koreanSubtitles.text = koreanSub[subIndex]
-                                tv_koreanSubtitlesDiction.text = koreanSubtitlesDiction[subIndex]
-                                tv_subtitles.text = subtitles[subIndex]
-                                subIndex++
+    fun getQuizImg(){
+        //imagesRef에서 파일 다운로드 URL 가져옴
+        imagesRef.downloadUrl.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // Glide 이용하여 이미지뷰에 로딩
+                Glide.with(context!!)
+                    .load(task.result)
+                    .into(
+                        object : SimpleTarget<Drawable>() {
+                            override fun onResourceReady(
+                                resource: Drawable,
+                                transition: com.bumptech.glide.request.transition.Transition<in Drawable>?) {
+                                image_quiz.background = resource
+                                image_quiz.background.setColorFilter(
+                                    parseColor("#BDBDBD"),
+                                    PorterDuff.Mode.MULTIPLY
+                                )
                             }
-                        }
-                        timer++
-
-                        Thread.sleep(1000)
-
-                    } catch (e: InterruptedException) {
-                        e.printStackTrace()
-                    }
-                }
-            })
-            thread.start()
-        }
-
-        private val playbackEventListener: YouTubePlayer.PlaybackEventListener =
-            object : YouTubePlayer.PlaybackEventListener {
-
-                override fun onSeekTo(p0: Int) {}
-
-                override fun onBuffering(p0: Boolean) {}
-
-                override fun onPlaying() {
-                    threadStopflag = true
-                }
-
-                override fun onStopped() {
-                }
-
-                override fun onPaused() {
-                    threadStopflag = false
-                }
+                        })
+            } else {
+                // URL을 가져오지 못하면 토스트 메세지
+                Toast.makeText(activity, task.exception!!.message, Toast.LENGTH_SHORT)
+                    .show()
             }
-        private val playerStateChangeListener: YouTubePlayer.PlayerStateChangeListener =
-            object : YouTubePlayer.PlayerStateChangeListener {
-
-                override fun onAdStarted() {
-                }
-
-                override fun onLoading() {
-                }
-
-                override fun onVideoStarted() {
-                    startSubtitles()
-                }
-
-                override fun onLoaded(p0: String?) {
-                }
-
-                override fun onVideoEnded() {
-                }
-
-                override fun onError(p0: YouTubePlayer.ErrorReason?) {
-                }
-            }
-
-        override fun onResume() {
-            super.onResume()
         }
+    }
 
         companion object { const val TAG = "PlaylistFragment" }
-
     }
 

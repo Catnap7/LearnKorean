@@ -8,7 +8,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('/AppDev/LearnKorean/learnKorean_key.keystore')
+            storeFile file('C:\\Users\\wkdwo\\DEVTOOL\\LearnKorean\\learnKorean_key.keystore')
             storePassword 'q1w2e3r4@'
             keyAlias = 'learnKorean_key'
             keyPassword 'q1w2e3r4@'
@@ -40,7 +40,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.firebase:firebase-database:19.2.0'
-    implementation 'com.google.android.gms:play-services-ads:18.3.0'
+    implementation 'com.google.android.gms:play-services-ads:19.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'

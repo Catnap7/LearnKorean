@@ -14,10 +14,10 @@
                 title="Quiz"
                 />
         <tab
-                id="@+id/tab_notice"
+                id="@+id/tab_bts"
                 icon="@drawable/my_tab_icon_face"
                 barColorWhenSelected="@color/learnKorean_footer_color"
-                title="Learn"
+                title=" "
                 />
         <tab
                 id="@+id/tab_settings"

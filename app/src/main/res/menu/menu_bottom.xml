@@ -13,11 +13,11 @@
             android:enabled="true"
             android:title="KOREAN" />
 
-   <!-- <item
-            android:id="@+id/tab_notice"
+    <item
+            android:id="@+id/tab_bts"
             android:icon="@drawable/my_tab_icon_face"
             android:enabled="true"
-            android:title="ABOUT" />-->
+            android:title="ABOUT" />
 
     <item
             android:id="@+id/tab_settings"

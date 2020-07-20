@@ -6,7 +6,7 @@ import android.view.ViewGroup
 
 class MainAdapter(fm: FragmentManager) : androidx.fragment.app.FragmentStatePagerAdapter(fm){
 
-    private val fragmentTitleList = mutableListOf("main","playlist","history")
+    private val fragmentTitleList = mutableListOf("main","playlist","culture")
 
     override fun getItem(p0: Int): Fragment {
 

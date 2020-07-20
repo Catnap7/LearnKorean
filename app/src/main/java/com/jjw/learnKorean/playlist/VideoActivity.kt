@@ -19,7 +19,7 @@ class VideoActivity  : AppCompatActivity() {
     private lateinit var mYoutubePlayerFragment : YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
-    private var timer:Int = -2
+    private var timer:Int = 0
     private var position:Int = 0
     private lateinit var videoId:String
     private val db:FirebaseFirestore = FirebaseFirestore.getInstance()
@@ -65,17 +65,17 @@ class VideoActivity  : AppCompatActivity() {
             intent.getStringExtra("videoId")
         }else "XsX3ATc3FbA" //작은 것들을 위한 시
 
+        getSubtitle()
+
         tv_VideoTitle.text = intent.getStringExtra("videoTitle")
 
         mYoutubePlayerFragment = YouTubePlayerSupportFragment()
         mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
 
-        supportFragmentManager!!.beginTransaction().apply {
+        supportFragmentManager.beginTransaction().apply {
             replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
             commit()
         }
-
-        getSubtitle()
 
     }
 

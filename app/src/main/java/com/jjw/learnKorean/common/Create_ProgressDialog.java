@@ -2,6 +2,9 @@ package com.jjw.learnKorean.common;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ProgressBar;
 
@@ -14,6 +17,17 @@ public class Create_ProgressDialog extends Dialog {
                                              CharSequence message) {
         return show(context, title, message, false);
     }
+//    boolean onTouchEvent (MotionEvent event)
+//    boolean onKeyDown(int keyCode, KeyEvent event)
+//    boolean onKeyUp(int keyConde, KeyEvent event)
+//    boolean onTrackballEvent(MotionEvent event)
+
+//    View.OnTouchListener : boolean onTouch (View v, MotionEvent event)
+//    View.OnKeyListener : boolean onKey (View v, int keyCode, keyEvent event)
+//    View.OnClickListener : void onClick (View v)
+//    View.OnLongClickListener : boolean onLongClick (View v)
+//    View.OnFocusChangeListener : void onFocusChange(View v, boolean hasFocus)
+
 
     public static Create_ProgressDialog show(Context context, CharSequence title,
                                              CharSequence message, boolean indeterminate) {

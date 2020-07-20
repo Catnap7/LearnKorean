@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_main_history.*
 
 class HistoryFragment : androidx.fragment.app.Fragment(){
 
-    //Histtory 말고 멤버별 섹션이라던지 딴걸로 교체해야될듯
+    //문화에 대해서 소개. 예를들어 얘네가 먹방에서 보여준 떡볶이 라던지 음식 패션 등등
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_main_history,container, false)
     }
