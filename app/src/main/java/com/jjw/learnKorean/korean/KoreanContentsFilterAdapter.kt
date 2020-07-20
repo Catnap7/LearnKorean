@@ -19,6 +19,7 @@ class KoreanContentsFilterAdapter(private val context: Context, private val  con
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_filter, parent, false))
     }
 
+    //브런치 버전 연동 테스트 
     override fun getItemCount(): Int = contentList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
