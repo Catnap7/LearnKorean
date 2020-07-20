@@ -19,6 +19,7 @@ import com.jjw.learnKorean.http.WsHttpClient;
 
 public class WebViewActivity extends ToolBarActivity {//병합하기
 
+    //리버트 되돌리기 테스트용
     private final String TAG = this.getClass().getSimpleName();
     private static final String FinishActivity = "MainActivity";
     private WsWebView webview;
