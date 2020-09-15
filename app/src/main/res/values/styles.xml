@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
@@ -30,47 +30,6 @@
         <item name="windowActionBar">false</item>
     </style>
 
-
-    <style name="Text_white_17dp">
-        <item name="android:textSize">17sp</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-    <style name="Text_black_17dp">
-        <item name="android:textSize">17sp</item>
-        <item name="android:textColor">@color/learnKorean_maintext_color</item>
-    </style>
-
-    <style name="Text_black_15dp">
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/learnKorean_maintext_color</item>
-    </style>
-
-    <style name="Text_black_14dp">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/learnKorean_maintext_color</item>
-    </style>
-
-    <style name="Text_black_13dp">
-        <item name="android:textSize">13sp</item>
-        <item name="android:textColor">@color/learnKorean_maintext_color</item>
-    </style>
-
-    <style name="Text_black_70_10dp">
-        <item name="android:textSize">10sp</item>
-        <item name="android:textColor">@color/bts_fakeLove_line_color</item>
-    </style>
-
-    <style name="Text_black_12dp">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/learnKorean_maintext_color</item>
-    </style>
-
-    <style name="Text_black_10dp">
-        <item name="android:textSize">10sp</item>
-        <item name="android:textColor">@color/learnKorean_maintext_color</item>
-    </style>
-
-
     <style name="NewDialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowTitleStyle">@null</item>
@@ -81,6 +40,16 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
 
 
 </resources>

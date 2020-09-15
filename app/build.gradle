@@ -57,7 +57,7 @@ dependencies {
     implementation 'com.roughike:bottom-bar:2.3.1'
 
     //이미지
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
     //firebase
@@ -76,5 +76,8 @@ dependencies {
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-androidx-scope:1.0.2"
     implementation "org.koin:koin-androidx-viewmodel:1.0.2"
+
+    //ViewModel
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
 
 }

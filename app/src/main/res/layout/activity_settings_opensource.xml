@@ -14,12 +14,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            style="@style/Text_black_15dp"
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Open Source"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

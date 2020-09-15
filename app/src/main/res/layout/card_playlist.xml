@@ -40,8 +40,8 @@
                 app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
-                    style="@style/Text_black_12dp"
                     android:id="@+id/tv_VideoTitle"
+                    android:textSize="12sp"
                     android:text="VideoName"
                     android:gravity="center_vertical"
                     android:singleLine="false"

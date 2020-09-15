@@ -15,7 +15,6 @@ import com.uxcam.UXCam
 import com.google.android.gms.ads.AdListener
 
 
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var mAdView : AdView
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //TODO UXCam 트래킹 시작
-        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
+//        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
 
         //구글 애드몹 광고 추가
         MobileAds.initialize(this) {}
@@ -38,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         //전면광고
         mInterstitialAd = InterstitialAd(this)
         //TODO 전면광고 _for_test
-        mInterstitialAd.adUnitId = resources.getString(R.string.Interstitial_ad_unit_id)
+//        mInterstitialAd.adUnitId = resources.getString(R.string.Interstitial_ad_unit_id)
+        mInterstitialAd.adUnitId = resources.getString(R.string.Interstitial_ad_unit_id_for_test)
         mInterstitialAd.loadAd(adRequest)
 
         //첫화면 지정

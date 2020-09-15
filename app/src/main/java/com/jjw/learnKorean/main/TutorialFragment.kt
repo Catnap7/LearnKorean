@@ -1,57 +1,55 @@
 package com.jjw.learnKorean.main
 
-import android.graphics.Color.parseColor
-import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.SimpleTarget
-import com.google.firebase.storage.FirebaseStorage
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.fragment_main_tutorial.*
-import java.util.*
+import android.os.CountDownTimer
 
 class TutorialFragment : androidx.fragment.app.Fragment() {
 
-    val QuizNum = 1
-    val progressValue = 0
-
-//    이 방법은 FirebaseStorage 에서 이미지 받아와서 그려주는방법인데 조금 느림
-    val fs = FirebaseStorage.getInstance()
-    val imagesRef = fs.reference.child("TutorialQuiz/quiz_$QuizNum.PNG")
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val tutorialView:View =  inflater.inflate(R.layout.fragment_main_tutorial,container, false)
-
-        getQuizImg()
-
-        progress()
-        return tutorialView
+        return inflater.inflate(R.layout.fragment_main_grade,container, false)
     }
 
+    /*fun OnClickHandler() {
+        val builder = AlertDialog.Builder(context)
+
+        builder.setTitle("").setMessage("Get Ready")
+
+        builder.setPositiveButton("START") { _, _ ->
+            getQuizImg()
+            progress()
+        }
+        *//* builder.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, id -> Toast.makeText(
+                     context, "Cancel Click", Toast.LENGTH_SHORT).show()
+             })
+
+         builder.setNeutralButton("Neutral", DialogInterface.OnClickListener { dialog, id ->
+                 Toast.makeText(context, "Neutral Click", Toast.LENGTH_SHORT).show()
+             })
+         *//*
+        val alertDialog = builder.create()
+        alertDialog.show()
+    }*/
+
+    //퀴즈 타이머
     fun progress() {
-        Thread(Runnable {
-            for (i in 0..5) {
-                Runnable {
-                    // 화면에 변경하는 작업을 구현
-                    quiz_progressBar.progress = progressValue
-                }
-                try {
-                    Thread.sleep(100)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
+
+        object : CountDownTimer(10000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                 pb_quiz.progress = (millisUntilFinished / 1000).toInt()
             }
-        }).start()
+            override fun onFinish() {
+                Toast.makeText(context, "Time out!", Toast.LENGTH_SHORT).show()
+            }
+        }.start()
     }
 
-
-
-    fun getQuizImg(){
+    /*fun getQuizImg(){
         //imagesRef에서 파일 다운로드 URL 가져옴
         imagesRef.downloadUrl.addOnCompleteListener { task ->
             if (task.isSuccessful) {
@@ -76,8 +74,6 @@ class TutorialFragment : androidx.fragment.app.Fragment() {
                     .show()
             }
         }
-    }
-
+    }*/
         companion object { const val TAG = "PlaylistFragment" }
     }
-

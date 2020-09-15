@@ -41,15 +41,15 @@ class VideoActivity  : AppCompatActivity() {
 
                 //TODO 플레이어 스타일 설정 CHROMELESS ( 동영상 진행 progressbar 및 멈춤기능없음), minimal (멈춤이랑 progressbar만 있음)
                 //디버깅용
-//                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
+                youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT)
                 //배포용
-              youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS)
+//              youtubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS)
 
                 //TODO cuevideo 동영상만 로드 밑에꺼는 바로 실행됨
                 //디버깅용
-//                youtubePlayer.cueVideo(videoId)
+                youtubePlayer.cueVideo(videoId)
                 //배포용
-              youtubePlayer.loadVideo(videoId)
+//              youtubePlayer.loadVideo(videoId)
 
                 //전체화면 버튼 숨김
                 youtubePlayer.setShowFullscreenButton(false)

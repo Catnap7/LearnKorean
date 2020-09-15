@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".MainActivity">
 
     <FrameLayout
             android:id="@+id/contentContainer"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@color/learnKorean_background_color"
             app:layout_constraintBottom_toTopOf="@+id/adView"
@@ -18,15 +18,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <!--TODO 배너광고 (테스트할땐 banner id 뒤에 _for_test 붙이면됨)-->
-    <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id"
+            ads:adUnitId="@string/banner_ad_unit_id_for_test"
             app:layout_constraintBottom_toTopOf="@+id/bottomBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -36,11 +35,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:alpha="0.7"
+            android:background="#FFFFFF"
+            android:elevation="10dp"
             app:itemBackground="@color/learnKorean_BottomNavigationView_bg_color"
             app:itemIconSize="24dp"
-            app:itemIconTint="@color/bb_darkBackgroundColor"
-            app:itemTextColor="@color/bb_darkBackgroundColor"
+            app:itemIconTint="@drawable/menu_selector_color"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+            app:itemTextColor="@drawable/menu_selector_color"
             app:labelVisibilityMode="selected"
             app:layout_behavior="tech.thdev.app.view.BottomNavigationBehavior"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -52,7 +52,7 @@
 
             <TextView
                     android:id="@+id/tv_ContentsTitleSub"
-                    style="@style/Text_black_14dp"
+                    android:textSize="14sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="title"
@@ -97,10 +97,10 @@
 
         <TextView
                 android:id="@+id/tv_ContentsTitleDiction"
-                style="@style/Text_black_15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
+                android:textSize="14sp"
                 android:visibility="gone"
                 android:text="title_diction"
                 android:textColor="@color/bts_boyWithLove_line_color"

@@ -15,23 +15,23 @@
 
         <TextView
                 android:id="@+id/text_AppVersion"
-                style="@style/Text_black_13dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="App Version"
+                android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
                 android:id="@+id/text_AppVersion_1"
-                style="@style/Text_black_70_10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="앱 버전"
+                android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_AppVersion" />
 
@@ -67,7 +67,7 @@
 
         <TextView
                 android:id="@+id/textView3"
-                style="@style/Text_black_13dp"
+                android:textSize="13sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -79,7 +79,7 @@
 
         <TextView
                 android:id="@+id/textView3_1"
-                style="@style/Text_black_70_10dp"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -119,7 +119,8 @@
 
         <TextView
                 android:id="@+id/tv_rateit"
-                style="@style/Text_black_13dp"
+                android:textSize="13sp"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -131,7 +132,7 @@
 
         <TextView
                 android:id="@+id/tv_rateit_1"
-                style="@style/Text_black_70_10dp"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -172,7 +173,7 @@
 
         <TextView
                 android:id="@+id/tv_openSource_license"
-                style="@style/Text_black_13dp"
+                android:textSize="13sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -184,7 +185,7 @@
 
         <TextView
                 android:id="@+id/tv_openSource_license_1"
-                style="@style/Text_black_70_10dp"
+                android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
