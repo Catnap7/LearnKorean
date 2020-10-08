@@ -9,7 +9,7 @@ class KoreanContents {
 
     //속담
     val korean_title_1 = arrayOf("그림의 떡","내 손에 장을 지진다","밑 빠진 독에 물 붓기","시작이 반이다","이미 엎질러진 물이다","세 살 버릇 여든까지 간다","웃으면 복이 와요","김칫국부터 마시지 말라","일찍 일어나는 새가 벌레를 잡는다","급할수록 돌아가라","금강산도 식후경")
-    val korean_title_sub_1 = arrayOf("pie in the sky","I'm losing my grip","Pouring water in the pot with the broken bottom","Well begun is half done","It's no use crying over spilt milk","What's learned in the cradle is carried to the grave","If you laugh, blessings will come your way","Don't count the chickens before they are hatched","The early bird catches the worm"
+    val korean_title_sub_1 = arrayOf("pie in the sky","I'm losindsg my grip","Pouring water in the pot with the broken bottom","Well begun is half done","It's no use crying over spilt milk","What's learned in the cradle is carried to the grave","If you laugh, blessings will come your way","Don't count the chickens before they are hatched","The early bird catches the worm"
                             ,"More haste less speed","A loaf of bread is better than the song of many birds")
     val korean_title_diction_1 = arrayOf("geurimui tteok ","nae sone jangeul jijinda","mit ppajin doge mul budsgi","sijagi banida","imi eopjilleojin murida","se sal beoreut yeodeunkkaji ganda","useumyeon bogi wayo","gimchisgukbuteo masiji malla","iljjik ireonaneun saega beollereul japneunda","geuphalsurok doragara","geumgangsando sikhugyeong")
 //    val korean_contents_2 = arrayOf("뭔가 그럴싸 하지만 결코 얻을 수 없는 것","자신이 주장하는 바에 대해 확신하는 말","밑 빠진 독에 아무리 물을 부어도 독이 채워질 수 없다는 뜻으로, 아무리 힘이나 밑천을 들여도 보람 없이 헛된 일이 되는 상태를 비유적으로 이르는 말")
@@ -30,6 +30,5 @@ class KoreanContents {
     val korean_title_4 = arrayOf("저희 주문 좀 받아주시겠어요?","여기서 가장 맛있는 음식은 뭐죠?","같은것으로 주문하겠습니다","예약을 미리 못했는데, 지금 이 식당 바로 이용할수 있을까요?","물은 셀프입니까?","이 반찬 좀 더주세요","잘 먹었습니다","맛집")
     val korean_title_sub_4 = arrayOf("Could you take our order?","What is the most delicious food here?","I'll order the same one","I couldn't make a reservation in advance, but can I use this restaurant right now?","Is the water self?","I'd like some more side dishes, please?","I really enjoyed the meal","famous restaurants")
     val korean_title_diction_4 = arrayOf("jeohui jumun jom badajusigesseoyo?","yeogiseo gajang masissneun eumsigeun mwojyo?","gateungeoseuro jumun hagessseupnida","yeyageul miri moshaessneunde, jigeum i sikdang baro iyonghalsu isseulkkayo?","mureun selpeuipnikka","i banchan jom deojuseyo","jal meogeossseupnida","masjip")
-
-
+    
 }

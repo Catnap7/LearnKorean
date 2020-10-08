@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnKorean.settings.SettingsFragment
 import com.uxcam.UXCam
 import com.google.android.gms.ads.AdListener
+import org.koin.core.context.startKoin
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         //TODO UXCam 트래킹 시작
 //        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
 
+        koin()
         //구글 애드몹 광고 추가
         MobileAds.initialize(this) {}
         //하단 배너광고
@@ -63,6 +65,12 @@ class MainActivity : AppCompatActivity() {
             return@setOnNavigationItemSelectedListener true
         }
 
+    }
+
+    private fun koin(){
+        startKoin {
+            
+        }
     }
 
     override fun onBackPressed() {

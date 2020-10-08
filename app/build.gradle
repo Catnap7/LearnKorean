@@ -71,11 +71,12 @@ dependencies {
     implementation 'com.uxcam:uxcam:3.1.10@aar'
     implementation 'com.google.firebase:firebase-firestore:21.3.0'
 
-
     // koin
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-androidx-scope:1.0.2"
     implementation "org.koin:koin-androidx-viewmodel:1.0.2"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-ext:$koin_version"
 
     //ViewModel
     implementation "androidx.fragment:fragment-ktx:1.2.5"

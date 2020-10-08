@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D81B60</color>
 
     <color name="red">#ff0000</color>
@@ -52,6 +52,11 @@
     <!--  MAP OF THE SOUL: 7 -->
     <color name="bts_on_line_color">#4096D3</color>
     <color name="bts_on_background_color">#F9D915</color>
+
+
+    <!--  Dynamite -->
+    <color name="bts_dynamite_line_color">#7F232F</color>
+    <color name="bts_dynamite_background_color">#F8649F</color>
 
 
 

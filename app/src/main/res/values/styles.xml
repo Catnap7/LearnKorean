@@ -11,9 +11,9 @@
 
     <style name="TabTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@android:color/white</item>                      <!-- 배경 -->
-        <item name="android:textColorPrimary">#35ADE2</item>       <!-- 탭바 선택된 텍스트 -->
+        <item name="android:textColorPrimary">@color/bts_dynamite_background_color</item>       <!-- 탭바 선택된 텍스트 -->
         <item name="android:textColorSecondary">@android:color/black</item>     <!-- 탭바 텍스트 -->
-        <item name="colorAccent">@color/bts_on_line_color</item>                    <!-- 하단 움직이는 바 색-->
+        <item name="colorAccent">@color/bts_dynamite_background_color</item>                    <!-- 하단 움직이는 바 색-->
         <item name="android:windowContentTransitions">true</item>
     </style>
 

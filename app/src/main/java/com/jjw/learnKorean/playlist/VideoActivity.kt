@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.replace
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_playlist_video.*
 @Suppress("UNCHECKED_CAST")
 class VideoActivity  : AppCompatActivity() {
 
-    private lateinit var mYoutubePlayerFragment : YouTubePlayerSupportFragment
+//    private lateinit var mYoutubePlayerFragment : YouTubePlayerSupportFragment
     private var threadStopflag = true
     private var handler = Handler()
     private var timer:Int = 0
@@ -69,7 +70,7 @@ class VideoActivity  : AppCompatActivity() {
 
         tv_VideoTitle.text = intent.getStringExtra("videoTitle")
 
-        mYoutubePlayerFragment = YouTubePlayerSupportFragment()
+        val mYoutubePlayerFragment = YouTubePlayerSupportFragment()
         mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
 
         supportFragmentManager.beginTransaction().apply {

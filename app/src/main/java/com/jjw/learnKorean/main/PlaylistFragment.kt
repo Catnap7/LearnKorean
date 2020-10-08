@@ -55,7 +55,7 @@ class PlaylistFragment : androidx.fragment.app.Fragment(){
 
                 val playList:ArrayList<String> = document.data!!["playList"] as ArrayList<String>
                 val playList_title:ArrayList<String> = document.data!!["title"] as ArrayList<String>
-                playlistAdapter = PlaylistAdapter(activity!!,playList,playList_title)
+                playlistAdapter = PlaylistAdapter(requireActivity(),playList,playList_title)
                 rv_youtubePlaylist.adapter = playlistAdapter
 
             } else {
