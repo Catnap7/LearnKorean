@@ -31,6 +31,8 @@
     <color name="learnKorean_subtext_color">#b2000000</color>
     <color name="learnKorean_b3black_color">#b3000000</color>
     <color name="learnKorean_disabletext_color">#61000000</color>
+    <color name="main_bottom_color">#403C3C</color>
+
 
     <!--MAP OF THE SOUL : PERSONA 작은것들을위한시-->
     <color name="bts_boyWithLove_line_color">#EFA6C1</color>
