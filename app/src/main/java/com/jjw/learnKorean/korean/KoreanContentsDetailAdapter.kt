@@ -17,11 +17,9 @@ import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_korean_detail.view.*
 import java.util.*
 
-
 //TODO 이거 나중에는 서버 붙이고 DB 연결해서 koreanContentsList에 하나로 묶어서 param 받아와야됨
 class KoreanContentsDetailAdapter(private val context: Context, private val korean_titlte:Array<String>,private val korean_title_sub:Array<String>, private val korean_title_diction:Array<String>) : RecyclerView.Adapter<KoreanContentsDetailAdapter.ViewHolder>() {
 
-    //메모리 최적화? 자원 최적화?
     private  lateinit var textToSpeech : TextToSpeech
     private  var selectPosition:Int = -1
 

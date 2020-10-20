@@ -35,23 +35,24 @@ android {
 }
 
 dependencies {
+    def nav_version = "2.3.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.firebase:firebase-database:19.2.0'
-    implementation 'com.google.android.gms:play-services-ads:19.0.1'
-    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.google.firebase:firebase-database:19.5.0'
+    implementation 'com.google.android.gms:play-services-ads:19.4.0'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //텝바
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
     //유튜브 라이브러리
 
     //noinspection GradlePath
     implementation files('libs\\YouTubeAndroidPlayerApi.jar')
-    implementation files('libs\\AppRate.jar')
+    implementation files('libs/AppRate.jar')
 
     //바텀바
     implementation 'com.roughike:bottom-bar:2.3.1'
@@ -61,22 +62,28 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
     //firebase
-    implementation 'com.google.firebase:firebase-analytics:17.2.1'
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.6.0'
+    implementation 'com.google.firebase:firebase-core:17.5.1'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
     implementation 'com.firebaseui:firebase-ui-storage:3.2.2'
-    implementation 'com.google.firebase:firebase-perf:19.0.2'
+    implementation 'com.google.firebase:firebase-perf:19.0.9'
 
     //모바일 UX 트래킹
     implementation 'com.uxcam:uxcam:3.1.10@aar'
-    implementation 'com.google.firebase:firebase-firestore:21.3.0'
+    implementation 'com.google.firebase:firebase-firestore:21.7.1'
 
     // koin
     implementation "org.koin:koin-android:$koin_version"
-    implementation "org.koin:koin-androidx-scope:1.0.2"
-    implementation "org.koin:koin-androidx-viewmodel:1.0.2"
+    implementation "org.koin:koin-androidx-scope:2.0.1"
+    implementation "org.koin:koin-androidx-viewmodel:2.0.1"
     implementation "org.koin:koin-androidx-scope:$koin_version"
     implementation "org.koin:koin-androidx-ext:$koin_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
     //ViewModel
     implementation "androidx.fragment:fragment-ktx:1.2.5"
