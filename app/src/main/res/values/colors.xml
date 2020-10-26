@@ -60,7 +60,11 @@
     <color name="bts_dynamite_line_color">#7F232F</color>
     <color name="bts_dynamite_background_color">#F8649F</color>
 
-
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
 
 
 </resources>

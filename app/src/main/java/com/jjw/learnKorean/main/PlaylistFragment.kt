@@ -12,9 +12,6 @@ import com.jjw.learnKorean.playlist.PlaylistAdapter
 import kotlinx.android.synthetic.main.fragment_main_playlist.*
 import kotlinx.android.synthetic.main.fragment_main_playlist.view.rv_youtubePlaylist
 
-
-
-@Suppress("UNCHECKED_CAST")
 class PlaylistFragment : androidx.fragment.app.Fragment(){
 
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()

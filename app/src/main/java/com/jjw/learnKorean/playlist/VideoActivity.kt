@@ -2,6 +2,7 @@ package com.jjw.learnKorean.playlist
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
@@ -14,14 +15,11 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_playlist_video.*
 
-@Suppress("UNCHECKED_CAST")
 class VideoActivity  : AppCompatActivity() {
 
-//    private lateinit var mYoutubePlayerFragment : YouTubePlayerSupportFragment
     private var threadStopflag = true
-    private var handler = Handler()
+    private var handler = Handler(Looper.getMainLooper())
     private var timer:Int = 0
-    private var position:Int = 0
     private lateinit var videoId:String
     private val db:FirebaseFirestore = FirebaseFirestore.getInstance()
     private lateinit var koreanSub:ArrayList<String>
@@ -63,7 +61,7 @@ class VideoActivity  : AppCompatActivity() {
         setContentView(R.layout.activity_playlist_video)
 
          videoId = if(intent.hasExtra("videoId")) {
-            intent.getStringExtra("videoId")
+             intent.getStringExtra("videoId").toString()
         }else "XsX3ATc3FbA" //작은 것들을 위한 시
 
         getSubtitle()
@@ -109,7 +107,6 @@ class VideoActivity  : AppCompatActivity() {
             while (threadStopflag) {
                 try {
                     handler.post {
-
 //                        tv_VideoName.text=timer.toString()
                         if(koreanSubTime.contains("$timer")) {
                             tv_koreanSubtitles.text = koreanSub[subIndex]

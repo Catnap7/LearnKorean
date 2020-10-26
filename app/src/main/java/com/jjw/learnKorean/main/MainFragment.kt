@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main_main.view.*
 
 class MainFragment : androidx.fragment.app.Fragment() {
 
-    private val adapter by lazy { MainAdapter(activity!!.supportFragmentManager) }
+    private val adapter by lazy { MainAdapter(requireActivity().supportFragmentManager) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
          val mainView = inflater.inflate(R.layout.activity_main_main,container, false)

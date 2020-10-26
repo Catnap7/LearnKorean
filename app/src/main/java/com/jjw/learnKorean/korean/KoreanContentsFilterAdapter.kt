@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.card_korean_filter.view.*
 class KoreanContentsFilterAdapter(private val context: Context, private val  contentList: ArrayList<String>, private var iFiltering:Int) : RecyclerView.Adapter<KoreanContentsFilterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_korean_filter, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_korean_filter, parent, false))
     }
 
     override fun getItemCount(): Int = contentList.size

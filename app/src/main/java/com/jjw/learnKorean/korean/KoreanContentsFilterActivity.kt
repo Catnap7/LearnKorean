@@ -45,11 +45,11 @@ class KoreanContentsFilterActivity :AppCompatActivity(){
             window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
             if(intent.hasExtra("iFiltering")) {
-                iFiltering = intent.getStringExtra("iFiltering")
+                iFiltering = intent.getStringExtra("iFiltering").toString()
             }
 
             if(intent.hasExtra("koreanContentsList")) {
-                contentsList = intent.getStringArrayListExtra("koreanContentsList")
+                contentsList = intent.getStringArrayListExtra("koreanContentsList") as ArrayList<String>
             }
 
             val koreanContentsFilterAdapter = KoreanContentsFilterAdapter(this,contentsList,Integer.parseInt(iFiltering))

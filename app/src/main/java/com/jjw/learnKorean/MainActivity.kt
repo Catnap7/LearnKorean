@@ -18,7 +18,7 @@ import org.koin.core.context.startKoin
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var mAdView : AdView
+//    lateinit var mAdView : AdView
     lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,11 +28,11 @@ class MainActivity : AppCompatActivity() {
         //TODO UXCam 트래킹 시작
 //        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))
 
-        koin()
+//        koin()
         //구글 애드몹 광고 추가
         MobileAds.initialize(this) {}
         //하단 배너광고
-        mAdView = findViewById(R.id.adView)
+//        mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 

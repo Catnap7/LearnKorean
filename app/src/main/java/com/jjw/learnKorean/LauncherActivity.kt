@@ -13,7 +13,6 @@ class LauncherActivity : AppCompatActivity() {
         setContentView(R.layout.activity_launcher)
 
         loading()
-
     }
 
     private fun loading() {

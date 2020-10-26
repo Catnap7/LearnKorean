@@ -40,11 +40,11 @@ class KoreanContentsActivity :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //상태바 없앰
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+//        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_koren_koreancontents)
 
         if(intent.hasExtra("iFiltering")) {
-            iFiltering = intent.getStringExtra("iFiltering")
+            iFiltering = intent.getStringExtra("iFiltering").toString()
         }
         if(intent.hasExtra("koreanContentsList")) {
             koreanContentsList = intent.getStringArrayListExtra("koreanContentsList")
@@ -63,7 +63,7 @@ class KoreanContentsActivity :AppCompatActivity(){
 
         when (requestCode) {
             2 -> if (resultCode == Activity.RESULT_OK){
-                iFiltering = data!!.getStringExtra("iFiltering")
+                iFiltering = data!!.getStringExtra("iFiltering").toString()
                 filter_brand.text = data.getStringExtra("koreanContentsTitle")
                 initRecyclerView()
                 }
