@@ -34,50 +34,21 @@ class KoreanListAdapter(private val context: Context, private val koreanContents
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        activity = context as Activity
         holder.tv_VideoName.text = koreanContentsList[position]
-/*
 
-//        이 방법은 FirebaseStorage 에서 이미지 받아와서 그려주는방법인데 조금 느림
-        val fs = FirebaseStorage.getInstance()
-        val imagesRef = fs.reference.child("KoreanContentsList/korean_contents_$position.jpg")
 
-        //imagesRef에서 파일 다운로드 URL 가져옴
-        imagesRef.downloadUrl.addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                // Glide 이용하여 이미지뷰에 로딩
-                Glide.with(activity)
-                    .load(task.result)
-                    .into(
-                        object : SimpleTarget<Drawable>() {
-                        override fun onResourceReady(
-                            resource: Drawable,
-                            transition: com.bumptech.glide.request.transition.Transition<in Drawable>?) {
-                            holder.layout_contents.background = resource
-                            holder.layout_contents.background.setColorFilter(
-                                parseColor("#BDBDBD"),
-                                PorterDuff.Mode.MULTIPLY
-                            )
-                        }
-                    })
-            } else {
-                // URL을 가져오지 못하면 토스트 메세지
-                Toast.makeText(activity, task.exception!!.message, Toast.LENGTH_SHORT)
-                    .show()
-            }
-        }
-*/
-        val backGroundId = context.resources.getIdentifier("korean_contents_$position", "drawable", context.packageName)
+        /* //배경이미지 삽입
 
-        //배경이미지 삽입
-        Glide.with(context).load(backGroundId).into(object : SimpleTarget<Drawable>() {
-            override fun onResourceReady(
-                resource: Drawable,
-                transition: com.bumptech.glide.request.transition.Transition<in Drawable>?){
-                holder.layout_contents.background = resource
-                holder.layout_contents.background.setColorFilter(parseColor("#BDBDBD"), PorterDuff.Mode.MULTIPLY)
-            }
-        })
+//        val backGroundId = context.resources.getIdentifier("korean_contents_$position", "drawable", context.packageName)
+
+ Glide.with(context).load(backGroundId).into(object : SimpleTarget<Drawable>() {
+     override fun onResourceReady(
+         resource: Drawable,
+         transition: com.bumptech.glide.request.transition.Transition<in Drawable>?){
+         holder.layout_contents.background = resource
+         holder.layout_contents.background.setColorFilter(parseColor("#BDBDBD"), PorterDuff.Mode.MULTIPLY)
+     }
+ })*/
 
 
         holder.layout_contents.setOnClickListener {

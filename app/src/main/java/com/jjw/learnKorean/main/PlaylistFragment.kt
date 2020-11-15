@@ -30,17 +30,6 @@ class PlaylistFragment : androidx.fragment.app.Fragment(){
         return playlistView
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
-    override fun onStop() {
-        super.onStop()
-    }
-
     // 유튜브 동영상 URI id랑 이름 받아와서 어뎁터에 저장
     fun getFirestoreVideos(){
 
@@ -48,7 +37,7 @@ class PlaylistFragment : androidx.fragment.app.Fragment(){
 
         docRefPlayList.get().addOnSuccessListener { document ->
             if (document != null) {
-                Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                Log.e(TAG, "DocumentSnapshot data: ${document.data}")
 
                 val playList:ArrayList<String> = document.data!!["playList"] as ArrayList<String>
                 val playList_title:ArrayList<String> = document.data!!["title"] as ArrayList<String>
@@ -56,7 +45,7 @@ class PlaylistFragment : androidx.fragment.app.Fragment(){
                 rv_youtubePlaylist.adapter = playlistAdapter
 
             } else {
-                Log.d(TAG, "No such document")
+                Log.e(TAG, "No such document")
             }
         }
 

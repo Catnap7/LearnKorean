@@ -2,6 +2,7 @@ package com.jjw.learnKorean
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.InterstitialAd
@@ -13,17 +14,21 @@ import kotlinx.android.synthetic.main.activity_main.*
 import com.jjw.learnKorean.settings.SettingsFragment
 import com.uxcam.UXCam
 import com.google.android.gms.ads.AdListener
+import com.jjw.learnKorean.databinding.ActivityMainBinding
 import org.koin.core.context.startKoin
 
 
 class MainActivity : AppCompatActivity() {
 
-//    lateinit var mAdView : AdView
     lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+//        setContentView(R.layout.activity_main)
+
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+//        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
         //TODO UXCam 트래킹 시작
 //        UXCam.startWithKey(resources.getString(R.string.UXCam_app_key))

@@ -85,18 +85,18 @@ class VideoActivity  : AppCompatActivity() {
         docRef.get().addOnSuccessListener { document ->
 
             if (document != null) {
-                Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                Log.e(TAG, "DocumentSnapshot data: ${document.data}")
 
                 subtitles = document.data!!["eng_sub"] as ArrayList<String>
                 koreanSubtitlesDiction = document.data!!["eng_dic"] as ArrayList<String>
                 koreanSub  = document.data!!["kor_sub"] as ArrayList<String>
                 koreanSubTime = document.data!!["time"] as ArrayList<String>
             } else {
-                Log.d(TAG, "No such document")
+                Log.e(TAG, "No such document")
             }
         }
             .addOnFailureListener { exception ->
-                Log.d(TAG, "get failed with ", exception)
+                Log.e(TAG, "get failed with ", exception)
             }
     }
 
