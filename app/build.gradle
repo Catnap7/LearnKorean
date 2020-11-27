@@ -11,10 +11,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('C:\\Users\\wkdwo\\DEVTOOL\\LearnKorean\\learnKorean_key.keystore')
-            storePassword 'q1w2e3r4@'
-            keyAlias = 'learnKorean_key'
-            keyPassword 'q1w2e3r4@'
+            storeFile file(SIGNED_STORE_FILE)
+            storePassword SIGNED_STORE_PASSWORD
+            keyAlias = SIGNED_KEY_ALIAS
+            keyPassword SIGNED_KEY_PASSWORD
         }
     }
     compileSdkVersion 30
@@ -52,7 +52,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.firebase:firebase-database:19.5.1'
     implementation 'com.google.android.gms:play-services-ads:19.5.0'
     testImplementation 'junit:junit:4.13.1'
