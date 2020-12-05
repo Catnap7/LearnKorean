@@ -1,24 +1,24 @@
 <resources>
     <string name="app_name">Study K</string>
-    <string name="youtube_api_key">AIzaSyAAa3Sq_2x4VJi7rUinIZc0lYbjCcnoukE</string>
-    <string name="my_email">wkdwodn2@kakao.com</string>
+    <string name="youtube_api_key">youtube_api_key</string>
+    <string name="my_email">my_email</string>
     <string name="coming_soon">coming soon</string>
     <string name="langintro">http://www.langintro.com/kintro/</string>
     <string name="nuri_sejong_hakdang">https://www.studyinkorea.go.kr/ko/main.do</string>
     <string name="kbs_learn_korean">http://rki.kbs.co.kr/learn_korean/lessons/e_index.htm</string>
     <string name="vank">http://korea.prkorea.com/wordpress/english/</string>
-    <string name="admob_app_id">ca-app-pub-6167489176355259~8028925849</string>
-    <string name="banner_ad_unit_id">ca-app-pub-6167489176355259/7282498921</string>
-    <string name="banner_ad_unit_id_for_test">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Interstitial_ad_unit_id">ca-app-pub-6167489176355259/7481518864</string>
-    <string name="Interstitial_ad_unit_id_for_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_app_id">admob_app_id</string>
+    <string name="banner_ad_unit_id">banner_ad_unit_id</string>
+    <string name="banner_ad_unit_id_for_test">banner_ad_unit_id_for_test</string>
+    <string name="Interstitial_ad_unit_id">Interstitial_ad_unit_id</string>
+    <string name="Interstitial_ad_unit_id_for_test">Interstitial_ad_unit_id_for_test</string>
 <!--    <string name="start_ad_unit_id">ca-app-pub9176355259/6277841385</string>-->
 <!--    <string name="start_ad_unit_id_for_test">ca-app-pub-3940256099942544/1033173712</string>-->
-    <string name="UXCam_app_key">dp27gk7hjll4zbw</string>
+    <string name="UXCam_app_key">UXCam_app_key</string>
 
     <string name="alert_error">Error</string>
 
-    <string name="apache_licences"> Copyright [2019] [Study K] \n\n
+    <string name="apache_licences"> Copyright [2020] [Study K] \n\n
 
 Licensed under the Apache License, Version 2.0 (the "License"); \n
 you may not use this file except in compliance with the License. \n
