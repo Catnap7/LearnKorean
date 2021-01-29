@@ -7,7 +7,7 @@
     <data>
         <variable
                 name="viewModel"
-                type="com.jjw.learnKorean.korean.KoreanFragment.ViewModel" />
+                type="com.jjw.learnKorean.component.fragment.KoreanFragment" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

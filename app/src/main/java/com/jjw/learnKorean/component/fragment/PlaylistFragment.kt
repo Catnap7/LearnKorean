@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.main
+package com.jjw.learnKorean.component.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,14 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jjw.learnKorean.R
-import com.jjw.learnKorean.playlist.PlaylistAdapter
+import com.jjw.learnKorean.adapter.PlaylistAdapter
 import kotlinx.android.synthetic.main.fragment_main_playlist.*
 import kotlinx.android.synthetic.main.fragment_main_playlist.view.rv_youtubePlaylist
 
 class PlaylistFragment : androidx.fragment.app.Fragment(){
 
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private lateinit var playlistAdapter:PlaylistAdapter
+    private lateinit var playlistAdapter: PlaylistAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val playlistView:View =  inflater.inflate(R.layout.fragment_main_playlist,container, false)
@@ -41,7 +41,11 @@ class PlaylistFragment : androidx.fragment.app.Fragment(){
 
                 val playList:ArrayList<String> = document.data!!["playList"] as ArrayList<String>
                 val playList_title:ArrayList<String> = document.data!!["title"] as ArrayList<String>
-                playlistAdapter = PlaylistAdapter(requireActivity(),playList,playList_title)
+                playlistAdapter = PlaylistAdapter(
+                    requireActivity(),
+                    playList,
+                    playList_title
+                )
                 rv_youtubePlaylist.adapter = playlistAdapter
 
             } else {

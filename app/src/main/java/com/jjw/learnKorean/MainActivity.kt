@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
-import com.jjw.learnKorean.korean.KoreanFragment
-import com.jjw.learnKorean.main.MainFragment
-import com.jjw.learnKorean.notice.NoticeFragment
+import com.jjw.learnKorean.component.fragment.KoreanFragment
+import com.jjw.learnKorean.component.fragment.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import com.jjw.learnKorean.settings.SettingsFragment
-import com.uxcam.UXCam
+import com.jjw.learnKorean.component.fragment.SettingsFragment
 import com.google.android.gms.ads.AdListener
 import com.jjw.learnKorean.databinding.ActivityMainBinding
 import org.koin.core.context.startKoin
@@ -55,9 +52,12 @@ class MainActivity : AppCompatActivity() {
 
         bottomBar.setOnNavigationItemSelectedListener { item ->
 
-            val settingsFragment = SettingsFragment()
-            val mainFragment = MainFragment()
-            val koreanFragment = KoreanFragment()
+            val settingsFragment =
+                SettingsFragment()
+            val mainFragment =
+                MainFragment()
+            val koreanFragment =
+                KoreanFragment()
 //            val noticeFragment = NoticeFragment()
             val transaction = supportFragmentManager.beginTransaction()
 

@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.playlist
+package com.jjw.learnKorean.component.activity
 
 import android.os.Bundle
 import android.os.Handler
@@ -7,7 +7,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerSupportFragment
@@ -69,7 +68,9 @@ class VideoActivity  : AppCompatActivity() {
         tv_VideoTitle.text = intent.getStringExtra("videoTitle")
 
         val mYoutubePlayerFragment = YouTubePlayerSupportFragment()
-        mYoutubePlayerFragment.initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
+        with(mYoutubePlayerFragment) {
+            initialize(resources.getString(R.string.youtube_api_key), youtubeListener)
+        }
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.youtube_fragment, mYoutubePlayerFragment as Fragment)
@@ -165,5 +166,5 @@ class VideoActivity  : AppCompatActivity() {
         }
     }
 
-    companion object { var TAG = "VideoActivity" }
+    companion object {    val TAG = this::class.java.toString() }
 }

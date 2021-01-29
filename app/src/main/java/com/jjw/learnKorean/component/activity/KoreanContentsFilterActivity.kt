@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.korean
+package com.jjw.learnKorean.component.activity
 
 import android.app.Activity
 import android.content.Intent
@@ -12,6 +12,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jjw.learnKorean.R
+import com.jjw.learnKorean.adapter.KoreanContentsFilterAdapter
 import kotlinx.android.synthetic.main.activity_korean_filter.*
 import java.util.ArrayList
 
@@ -52,7 +53,12 @@ class KoreanContentsFilterActivity :AppCompatActivity(){
                 contentsList = intent.getStringArrayListExtra("koreanContentsList") as ArrayList<String>
             }
 
-            val koreanContentsFilterAdapter = KoreanContentsFilterAdapter(this,contentsList,Integer.parseInt(iFiltering))
+            val koreanContentsFilterAdapter =
+                KoreanContentsFilterAdapter(
+                    this,
+                    contentsList,
+                    Integer.parseInt(iFiltering)
+                )
 
             recycler_view_contents.isNestedScrollingEnabled = false
             recycler_view_contents.layoutManager = LinearLayoutManager(this)

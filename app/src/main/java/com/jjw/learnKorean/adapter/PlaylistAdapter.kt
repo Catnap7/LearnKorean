@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.playlist
+package com.jjw.learnKorean.adapter
 
 import android.app.Activity
 import android.content.ContentValues.TAG
@@ -17,6 +17,7 @@ import com.google.android.youtube.player.YouTubeThumbnailView
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_playlist.view.*
 import androidx.core.app.ActivityOptionsCompat
+import com.jjw.learnKorean.component.activity.VideoActivity
 
 
 class PlaylistAdapter(private val context:Context, private val playlist: ArrayList<String>,private val playlist_title: ArrayList<String>) : RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {

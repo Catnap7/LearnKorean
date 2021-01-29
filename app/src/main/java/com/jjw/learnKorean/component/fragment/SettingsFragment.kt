@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.settings
+package com.jjw.learnKorean.component.fragment
 
 import android.content.Intent
 import android.content.pm.PackageInfo
@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_main_settings.view.*
-
 
 
 class SettingsFragment: androidx.fragment.app.Fragment() {

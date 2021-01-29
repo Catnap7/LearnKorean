@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.korean
+package com.jjw.learnKorean.component.activity
 
 import android.app.Activity
 import android.content.Intent
@@ -9,8 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.activity_koren_koreancontents.*
-import android.view.WindowManager
-import android.widget.TextView
+import com.jjw.learnKorean.adapter.KoreanContentsDetailAdapter
 import com.jjw.learnKorean.common.KoreanContents
 
 
@@ -18,7 +17,7 @@ class KoreanContentsActivity :AppCompatActivity(){
 
     private var iFiltering:String = "0"
     private var koreanContentsList:ArrayList<String>? = null
-    private lateinit var koreanContentsDetailAdapter:KoreanContentsDetailAdapter
+    private lateinit var koreanContentsDetailAdapter: KoreanContentsDetailAdapter
     private lateinit var korean_title:Array<String>
     private lateinit var korean_title_sub:Array<String>
     private lateinit var korean_title_diction:Array<String>
@@ -127,7 +126,13 @@ class KoreanContentsActivity :AppCompatActivity(){
             }
 
         }
-        koreanContentsDetailAdapter = KoreanContentsDetailAdapter(this,korean_title,korean_title_sub,korean_title_diction)
+        koreanContentsDetailAdapter =
+            KoreanContentsDetailAdapter(
+                this,
+                korean_title,
+                korean_title_sub,
+                korean_title_diction
+            )
 
         LinearLayoutManager(this).let{
             rv_koreanContents_detail.layoutManager = it

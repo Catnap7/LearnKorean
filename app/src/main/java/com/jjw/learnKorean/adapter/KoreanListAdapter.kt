@@ -1,25 +1,17 @@
-package com.jjw.learnKorean.korean
+package com.jjw.learnKorean.adapter
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color.parseColor
-import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.SimpleTarget
 import com.jjw.learnKorean.R
 import kotlinx.android.synthetic.main.card_korean_main.view.*
-import com.google.firebase.storage.FirebaseStorage
-import android.widget.Toast
-import com.google.android.gms.tasks.OnCompleteListener
+import com.jjw.learnKorean.component.activity.KoreanContentsActivity
 
 
 class KoreanListAdapter(private val context: Context, private val koreanContentsList: ArrayList<String>) : RecyclerView.Adapter<KoreanListAdapter.ViewHolder>(){

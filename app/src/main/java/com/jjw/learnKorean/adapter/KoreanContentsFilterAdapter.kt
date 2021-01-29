@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.korean
+package com.jjw.learnKorean.adapter
 
 import android.content.Context
 import android.graphics.Typeface
@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.jjw.learnKorean.R
+import com.jjw.learnKorean.component.activity.KoreanContentsFilterActivity
 import kotlinx.android.synthetic.main.card_korean_filter.view.*
 
 class KoreanContentsFilterAdapter(private val context: Context, private val  contentList: ArrayList<String>, private var iFiltering:Int) : RecyclerView.Adapter<KoreanContentsFilterAdapter.ViewHolder>() {

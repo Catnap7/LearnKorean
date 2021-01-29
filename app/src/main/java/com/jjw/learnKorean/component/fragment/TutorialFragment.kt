@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.main
+package com.jjw.learnKorean.component.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

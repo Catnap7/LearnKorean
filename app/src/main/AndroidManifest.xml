@@ -22,7 +22,7 @@
 
         <activity android:name="com.jjw.learnKorean.MainActivity"/>
 
-        <activity android:name=".LauncherActivity">
+        <activity android:name=".component.activity.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW" />
@@ -32,23 +32,23 @@
         </activity>
 
         <activity
-                android:name="com.jjw.learnKorean.playlist.VideoActivity"
+                android:name="com.jjw.learnKorean.component.activity.VideoActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme" />
         <activity
-                android:name="com.jjw.learnKorean.korean.KoreanContentsActivity"
+                android:name="com.jjw.learnKorean.component.activity.KoreanContentsActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme" />
 
         <activity
-                android:name="com.jjw.learnKorean.settings.OpenSourceActivity"
+                android:name="com.jjw.learnKorean.component.activity.OpenSourceActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme" />
         <activity
-                android:name="com.jjw.learnKorean.korean.KoreanContentsFilterActivity"
+                android:name="com.jjw.learnKorean.component.activity.KoreanContentsFilterActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="unspecified"
                 android:theme="@style/FilterTheme"/>

@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.settings
+package com.jjw.learnKorean.component.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

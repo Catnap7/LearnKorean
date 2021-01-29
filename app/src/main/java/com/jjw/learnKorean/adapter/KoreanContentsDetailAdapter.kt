@@ -1,4 +1,4 @@
-package com.jjw.learnKorean.korean
+package com.jjw.learnKorean.adapter
 
 import android.content.Context
 import android.os.Build
