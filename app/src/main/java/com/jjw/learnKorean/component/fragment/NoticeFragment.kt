@@ -8,10 +8,8 @@ import com.jjw.learnKorean.R
 
  class NoticeFragment : androidx.fragment.app.Fragment() {
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val noticeView = inflater.inflate(R.layout.fragment_notice_main,container, false)
-
 
         return noticeView
     }
